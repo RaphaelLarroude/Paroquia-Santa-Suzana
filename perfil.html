@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil - Hub Paroquial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico">
+ 
+ <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <button onclick="window.location.href='hub.html'" class="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+          <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+        </button>
+        <div>
+          <h1 class="text-xl font-semibold">Meu Perfil</h1>
+          <p class="text-sm text-gray-600">Visualize e edite suas informações</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <!-- Cabeçalho do Perfil -->
+    <div class="bg-gradient-to-r from-[#dc143c] to-[#b01030] rounded-2xl p-8 mb-8 text-white">
+      <div class="flex items-center gap-6">
+        <div class="relative">
+          <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center text-[#dc143c] font-bold text-3xl">
+            JS
+          </div>
+          <button onclick="changeProfilePicture()" class="absolute bottom-0 right-0 bg-white text-[#dc143c] p-2 rounded-full hover:bg-gray-100 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1">
+          <h2 class="text-3xl font-light mb-2">João Silva</h2>
+          <p class="text-white/90 mb-3">Paroquiano • Membro desde Outubro 2024</p>
+          <div class="flex gap-4 text-sm">
+            <div>
+              <span class="font-semibold">15</span> publicações
+            </div>
+            <div>
+              <span class="font-semibold">48</span> curtidas
+            </div>
+            <div>
+              <span class="font-semibold">23</span> comentários
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Informações Pessoais -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+      <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center gap-2">
+          <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+          <h3 class="text-2xl font-semibold">Informações Pessoais</h3>
+        </div>
+        <button onclick="editProfile()" class="text-[#dc143c] hover:text-[#b01030] font-semibold text-sm flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+          </svg>
+          Editar
+        </button>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-4 bg-[#f5ebe0] rounded-lg">
+          <p class="text-sm text-gray-600 mb-1">Nome Completo</p>
+          <p class="font-semibold">João Silva</p>
+        </div>
+        
+        <div class="p-4 bg-[#f5ebe0] rounded-lg">
+          <p class="text-sm text-gray-600 mb-1">Email</p>
+          <p class="font-semibold">joao.silva@email.com</p>
+        </div>
+        
+        <div class="p-4 bg-[#f5ebe0] rounded-lg">
+          <p class="text-sm text-gray-600 mb-1">Telefone</p>
+          <p class="font-semibold">(11) 98765-4321</p>
+        </div>
+        
+        <div class="p-4 bg-[#f5ebe0] rounded-lg">
+          <p class="text-sm text-gray-600 mb-1">Data de Nascimento</p>
+          <p class="font-semibold">15 de Março de 1990</p>
+        </div>
+        
+        <div class="p-4 bg-[#f5ebe0] rounded-lg">
+          <p class="text-sm text-gray-600 mb-1">Endereço</p>
+          <p class="font-semibold">São Paulo, SP</p>
+        </div>
+        
+        <div class="p-4 bg-[#f5ebe0] rounded-lg">
+          <p class="text-sm text-gray-600 mb-1">Comunidade</p>
+          <p class="font-semibold">Santa Suzana</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Atividades Recentes -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+      <div class="flex items-center gap-2 mb-6">
+        <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <h3 class="text-2xl font-semibold">Atividades Recentes</h3>
+      </div>
+      
+      <div class="space-y-4">
+        <div class="flex gap-4 p-4 bg-[#f5ebe0] rounded-lg">
+          <div class="w-10 h-10 bg-[#dc143c] rounded-full flex items-center justify-center text-white flex-shrink-0">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <p class="text-sm">Você curtiu a publicação de <span class="font-semibold">Maria Silva</span></p>
+            <p class="text-xs text-gray-500 mt-1">Há 2 horas</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-4 p-4 bg-[#f5ebe0] rounded-lg">
+          <div class="w-10 h-10 bg-[#dc143c] rounded-full flex items-center justify-center text-white flex-shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.436-8 9-8s9 3.582 9 8z"></path>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <p class="text-sm">Você publicou: <span class="italic">"Bom dia a todos! Que Deus abençoe..."</span></p>
+            <p class="text-xs text-gray-500 mt-1">Há 5 horas</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-4 p-4 bg-[#f5ebe0] rounded-lg">
+          <div class="w-10 h-10 bg-[#dc143c] rounded-full flex items-center justify-center text-white flex-shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"></path>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <p class="text-sm">Você respondeu ao comentário de <span class="font-semibold">Pedro Costa</span></p>
+            <p class="text-xs text-gray-500 mt-1">Ontem</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-4 p-4 bg-[#f5ebe0] rounded-lg">
+          <div class="w-10 h-10 bg-[#dc143c] rounded-full flex items-center justify-center text-white flex-shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <p class="text-sm">Você se inscreveu no evento <span class="font-semibold">Encontro de Jovens</span></p>
+            <p class="text-xs text-gray-500 mt-1">Há 2 dias</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ministérios e Grupos -->
+    <div class="bg-white rounded-xl shadow-md p-6">
+      <div class="flex items-center gap-2 mb-6">
+        <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+        </svg>
+        <h3 class="text-2xl font-semibold">Ministérios e Grupos</h3>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="p-4 bg-[#f5ebe0] rounded-lg card-hover">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-[#dc143c] rounded-lg flex items-center justify-center text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold">Coral Paroquial</p>
+              <p class="text-xs text-gray-600">Membro ativo</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="p-4 bg-[#f5ebe0] rounded-lg card-hover">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-[#dc143c] rounded-lg flex items-center justify-center text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold">Catequese</p>
+              <p class="text-xs text-gray-600">Catequista</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="p-4 bg-[#f5ebe0] rounded-lg card-hover">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-[#dc143c] rounded-lg flex items-center justify-center text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold">Pastoral da Caridade</p>
+              <p class="text-xs text-gray-600">Voluntário</p>
+            </div>
+          </div>
+        </div>
+        
+        <button onclick="joinGroup()" class="p-4 border-2 border-dashed border-gray-300 rounded-lg hover:border-[#dc143c] hover:bg-[#f5ebe0] transition-all text-center">
+          <svg class="w-8 h-8 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+          </svg>
+          <p class="text-sm text-gray-600 font-medium">Participar de mais grupos</p>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Adicionando footer com copyright e informações do criador -->
+  <footer class="bg-white border-t border-gray-200 mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-6">
+      <p class="text-center text-sm text-gray-600">
+        © 2025 Raphael Costa. Todos os direitos reservados. Criado para o site da Paróquia Santa Suzana
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function changeProfilePicture() {
+      alert('Funcionalidade de alterar foto de perfil em desenvolvimento');
+    }
+
+    function editProfile() {
+      alert('Funcionalidade de editar perfil em desenvolvimento');
+    }
+
+    function joinGroup() {
+      alert('Funcionalidade de participar de grupos em desenvolvimento');
+    }
+  </script>
+</body>
+</html>

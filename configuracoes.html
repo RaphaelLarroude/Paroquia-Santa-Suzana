@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações - Hub Paroquial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <button onclick="window.location.href='hub.html'" class="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+          <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+        </button>
+        <div>
+          <h1 class="text-xl font-semibold">Configurações</h1>
+          <p class="text-sm text-gray-600">Gerencie suas preferências</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <!-- Conta -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+      <div class="flex items-center gap-2 mb-6">
+        <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg>
+        <h2 class="text-2xl font-semibold">Informações da Conta</h2>
+      </div>
+      
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Nome Completo</label>
+          <input type="text" value="João Silva" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#dc143c] focus:border-transparent">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+          <input type="email" value="joao.silva@email.com" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#dc143c] focus:border-transparent">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
+          <input type="tel" value="(11) 98765-4321" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#dc143c] focus:border-transparent">
+        </div>
+        
+        <div class="pt-4">
+          <button onclick="saveAccountInfo()" class="bg-[#dc143c] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#b01030] transition-colors">
+            Salvar Alterações
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Segurança -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+      <div class="flex items-center gap-2 mb-6">
+        <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+        </svg>
+        <h2 class="text-2xl font-semibold">Segurança</h2>
+      </div>
+      
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Senha Atual</label>
+          <input type="password" placeholder="Digite sua senha atual" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#dc143c] focus:border-transparent">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Nova Senha</label>
+          <input type="password" placeholder="Digite sua nova senha" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#dc143c] focus:border-transparent">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Confirmar Nova Senha</label>
+          <input type="password" placeholder="Confirme sua nova senha" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#dc143c] focus:border-transparent">
+        </div>
+        
+        <div class="pt-4">
+          <button onclick="changePassword()" class="bg-[#dc143c] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#b01030] transition-colors">
+            Alterar Senha
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notificações -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+      <div class="flex items-center gap-2 mb-6">
+        <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+        </svg>
+        <h2 class="text-2xl font-semibold">Notificações</h2>
+      </div>
+      
+      <div class="space-y-4">
+        <div class="flex items-center justify-between p-4 bg-[#f5ebe0] rounded-lg">
+          <div>
+            <p class="font-medium">Novos eventos</p>
+            <p class="text-sm text-gray-600">Receba notificações sobre novos eventos paroquiais</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" checked class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#dc143c]/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#dc143c]"></div>
+          </label>
+        </div>
+        
+        <div class="flex items-center justify-between p-4 bg-[#f5ebe0] rounded-lg">
+          <div>
+            <p class="font-medium">Evangelho do dia</p>
+            <p class="text-sm text-gray-600">Receba o evangelho diário pela manhã</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" checked class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#dc143c]/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#dc143c]"></div>
+          </label>
+        </div>
+        
+        <div class="flex items-center justify-between p-4 bg-[#f5ebe0] rounded-lg">
+          <div>
+            <p class="font-medium">Atividades no mural</p>
+            <p class="text-sm text-gray-600">Notificações de curtidas e respostas nas suas publicações</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" checked class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#dc143c]/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#dc143c]"></div>
+          </label>
+        </div>
+        
+        <div class="flex items-center justify-between p-4 bg-[#f5ebe0] rounded-lg">
+          <div>
+            <p class="font-medium">Avisos importantes</p>
+            <p class="text-sm text-gray-600">Comunicados urgentes da paróquia</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" checked class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#dc143c]/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#dc143c]"></div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Privacidade -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+      <div class="flex items-center gap-2 mb-6">
+        <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+        </svg>
+        <h2 class="text-2xl font-semibold">Privacidade</h2>
+      </div>
+      
+      <div class="space-y-4">
+        <div class="flex items-center justify-between p-4 bg-[#f5ebe0] rounded-lg">
+          <div>
+            <p class="font-medium">Perfil público</p>
+            <p class="text-sm text-gray-600">Permitir que outros paroquianos vejam seu perfil</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" checked class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#dc143c]/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#dc143c]"></div>
+          </label>
+        </div>
+        
+        <div class="flex items-center justify-between p-4 bg-[#f5ebe0] rounded-lg">
+          <div>
+            <p class="font-medium">Mostrar atividade</p>
+            <p class="text-sm text-gray-600">Exibir suas curtidas e comentários publicamente</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" checked class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#dc143c]/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#dc143c]"></div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sobre -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+      <div class="flex items-center gap-2 mb-6">
+        <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <h2 class="text-2xl font-semibold">Sobre o Hub</h2>
+      </div>
+      
+      <div class="space-y-3">
+        <button onclick="window.location.href='sobre.html'" class="w-full flex items-center justify-between p-4 bg-[#f5ebe0] rounded-lg hover:bg-[#eadcc7] transition-colors text-left">
+          <span class="font-medium">Sobre a Paróquia</span>
+          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+        
+        <button onclick="openTerms()" class="w-full flex items-center justify-between p-4 bg-[#f5ebe0] rounded-lg hover:bg-[#eadcc7] transition-colors text-left">
+          <span class="font-medium">Termos de Uso</span>
+          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+        
+        <button onclick="openPrivacyPolicy()" class="w-full flex items-center justify-between p-4 bg-[#f5ebe0] rounded-lg hover:bg-[#eadcc7] transition-colors text-left">
+          <span class="font-medium">Política de Privacidade</span>
+          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+        
+        <div class="p-4 bg-[#f5ebe0] rounded-lg">
+          <p class="text-sm text-gray-600">Versão 1.0.0</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Adicionando rodapé com copyright -->
+  <footer class="bg-white border-t border-gray-200 mt-12 py-6">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="text-center text-sm text-gray-600">
+        © 2025 Raphael Costa. Todos os direitos reservados. Criado para o site da Paróquia Santa Suzana
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function saveAccountInfo() {
+      alert('Informações da conta salvas com sucesso!');
+    }
+
+    function changePassword() {
+      alert('Senha alterada com sucesso!');
+    }
+
+    function openTerms() {
+      alert('Termos de Uso em desenvolvimento');
+    }
+
+    function openPrivacyPolicy() {
+      alert('Política de Privacidade em desenvolvimento');
+    }
+  </script>
+</body>
+</html>

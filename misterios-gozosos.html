@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mistérios Gozosos - Paróquia Santa Suzana</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <button onclick="goBack()" class="p-2 hover:bg-gray-100 rounded-lg">
+          <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+        </button>
+        <img src="icone-menu.png" alt="Paróquia Santa Suzana" class="h-12">
+        <div>
+          <h1 class="text-xl font-semibold">Mistérios Gozosos</h1>
+          <p class="text-sm text-gray-600">Segunda-feira e Sábado</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <!-- Banner -->
+    <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-2xl p-8 mb-8 text-white">
+      <div class="flex items-center gap-4 mb-3">
+        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-3xl font-light">Mistérios Gozosos</h2>
+          <p class="text-white/90">Meditações sobre a alegria da Encarnação</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Significado -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+      <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+        <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+        </svg>
+        Significado Espiritual
+      </h3>
+      <div class="bg-[#f5ebe0] rounded-lg p-6 space-y-3">
+        <p class="text-gray-700">Os Mistérios Gozosos nos convidam a contemplar os momentos de alegria e esperança que marcaram o início da vida de Jesus Cristo na Terra. São meditações sobre a Encarnação do Verbo, o amor de Maria e José, e a infância de nosso Salvador.</p>
+        <p class="text-gray-700">Ao rezar estes mistérios, somos chamados a refletir sobre a humildade de Deus que se fez homem, a obediência de Maria ao plano divino, e a alegria que a presença de Cristo traz ao mundo. Estes mistérios nos ensinam sobre a fé, a esperança e o amor incondicional.</p>
+        <p class="text-gray-700"><strong>Virtudes a meditar:</strong> Humildade, Caridade, Pobreza de Espírito, Obediência e Sabedoria.</p>
+      </div>
+    </div>
+
+    <!-- Como Rezar -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+      <h3 class="text-2xl font-semibold mb-4">Como Rezar Cada Mistério</h3>
+      <div class="bg-[#f5ebe0] rounded-lg p-6 space-y-2 text-sm">
+        <p><strong>1.</strong> Anuncie o mistério e faça uma breve meditação</p>
+        <p><strong>2.</strong> Reze um Pai Nosso</p>
+        <p><strong>3.</strong> Reze dez Ave Marias meditando no mistério</p>
+        <p><strong>4.</strong> Reze um Glória ao Pai</p>
+        <p><strong>5.</strong> Opcionalmente, reze a Oração de Fátima: "Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno, levai as almas todas para o céu, principalmente as que mais precisarem."</p>
+      </div>
+    </div>
+
+    <!-- Os 5 Mistérios -->
+    <div class="space-y-6">
+      <!-- 1º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">1</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Anunciação do Anjo Gabriel a Maria</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Eis aqui a serva do Senhor, faça-se em mim segundo a tua palavra." (Lc 1,38)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> O Anjo Gabriel aparece a Maria em Nazaré e anuncia que ela foi escolhida para ser a Mãe de Deus. Maria, com humildade e fé, aceita a vontade divina dizendo "Faça-se em mim segundo a tua palavra". Este momento marca o início da Encarnação do Verbo.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> Como Maria, devemos estar abertos à vontade de Deus em nossas vidas, mesmo quando não compreendemos completamente Seus planos. A humildade e a confiança de Maria são exemplos para todos nós.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Humildade</p>
+        </div>
+      </div>
+
+      <!-- 2º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">2</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Visitação de Maria a sua prima Isabel</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Bendita és tu entre as mulheres e bendito é o fruto do teu ventre!" (Lc 1,42)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Maria, grávida de Jesus, vai às pressas visitar sua prima Isabel, que também estava grávida de João Batista. Ao ouvir a saudação de Maria, João salta de alegria no ventre de Isabel, que proclama Maria bendita entre as mulheres. Maria responde com o Magnificat, glorificando a Deus.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> Maria nos ensina a caridade ao servir sua prima idosa. Ela não guarda para si a alegria de carregar Jesus, mas a compartilha. Somos chamados a levar Cristo aos outros através de nossas ações caridosas.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Caridade fraterna</p>
+        </div>
+      </div>
+
+      <!-- 3º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">3</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">O Nascimento de Jesus em Belém</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Hoje nasceu para vós um Salvador, que é Cristo Senhor." (Lc 2,11)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Jesus nasce em uma humilde manjedoura em Belém. O Rei dos reis vem ao mundo na mais absoluta pobreza, envolto em panos e deitado numa manjedoura. Os anjos anunciam aos pastores: "Glória a Deus nas alturas e paz na terra aos homens de boa vontade."</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> O nascimento de Jesus nos ensina sobre o desprendimento dos bens materiais. Deus escolheu nascer pobre para nos mostrar que a verdadeira riqueza está no amor e na comunhão com Ele. A simplicidade e a pobreza de espírito nos aproximam de Deus.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Pobreza de espírito e desprendimento</p>
+        </div>
+      </div>
+
+      <!-- 4º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">4</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Apresentação do Menino Jesus no Templo</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Meus olhos viram a tua salvação." (Lc 2,30)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Quarenta dias após o nascimento, Maria e José levam Jesus ao Templo de Jerusalém para apresentá-lo ao Senhor, conforme a Lei de Moisés. Lá, o idoso Simeão reconhece em Jesus o Messias prometido e profetiza que uma espada transpassaria o coração de Maria.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> Maria e José obedecem fielmente à Lei de Deus. Este mistério nos ensina sobre a obediência às leis divinas e humanas justas. Também nos prepara para compreender que seguir Cristo pode trazer sofrimento, mas sempre com um propósito redentor.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Obediência e pureza</p>
+        </div>
+      </div>
+
+      <!-- 5º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">5</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Perda e o Encontro do Menino Jesus no Templo</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Não sabíeis que devo ocupar-me das coisas de meu Pai?" (Lc 2,49)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Aos doze anos, Jesus fica em Jerusalém sem que Maria e José percebam. Após três dias de angustiante busca, encontram-no no Templo, sentado entre os doutores, ouvindo-os e interrogando-os. Jesus revela sua consciência da missão divina ao dizer que deve cuidar das coisas de seu Pai.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> Este mistério nos ensina a buscar Jesus constantemente em nossas vidas. Quando nos afastamos dele, devemos procurá-lo com a mesma dedicação de Maria e José. Jesus nos mostra que devemos priorizar as coisas de Deus acima de tudo, crescendo em sabedoria e graça.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Busca de Deus e sabedoria</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orações -->
+    <div class="bg-white rounded-xl shadow-md p-6 mt-8">
+      <h3 class="text-2xl font-semibold mb-4">Orações do Rosário</h3>
+      <div class="space-y-4">
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Pai Nosso</p>
+          <p class="text-sm text-gray-700">Pai nosso, que estais nos céus, santificado seja o vosso nome, venha a nós o vosso reino, seja feita a vossa vontade assim na terra como no céu. O pão nosso de cada dia nos dai hoje, perdoai-nos as nossas ofensas assim como nós perdoamos a quem nos tem ofendido, e não nos deixeis cair em tentação, mas livrai-nos do mal. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Ave Maria</p>
+          <p class="text-sm text-gray-700">Ave Maria, cheia de graça, o Senhor é convosco, bendita sois vós entre as mulheres e bendito é o fruto do vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós pecadores, agora e na hora da nossa morte. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Glória ao Pai</p>
+          <p class="text-sm text-gray-700">Glória ao Pai, ao Filho e ao Espírito Santo. Como era no princípio, agora e sempre. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Oração de Fátima (opcional após cada mistério)</p>
+          <p class="text-sm text-gray-700">Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno, levai as almas todas para o céu, principalmente as que mais precisarem.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Adicionando rodapé com copyright -->
+  <footer class="bg-white border-t border-gray-200 mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-6">
+      <p class="text-center text-sm text-gray-600">
+        © 2025 Raphael Costa. Todos os direitos reservados. Criado para o site da Paróquia Santa Suzana
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

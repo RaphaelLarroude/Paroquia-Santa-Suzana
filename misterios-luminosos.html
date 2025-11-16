@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mistérios Luminosos - Paróquia Santa Suzana</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <button onclick="goBack()" class="p-2 hover:bg-gray-100 rounded-lg">
+          <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+        </button>
+        <img src="icone-menu.png" alt="Paróquia Santa Suzana" class="h-12">
+        <div>
+          <h1 class="text-xl font-semibold">Mistérios Luminosos</h1>
+          <p class="text-sm text-gray-600">Quinta-feira</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <!-- Banner -->
+    <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-8 mb-8 text-white">
+      <div class="flex items-center gap-4 mb-3">
+        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-3xl font-light">Mistérios Luminosos</h2>
+          <p class="text-white/90">Meditações sobre a vida pública de Jesus</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Significado -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+      <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+        </svg>
+        Significado Espiritual
+      </h3>
+      <div class="bg-[#f5ebe0] rounded-lg p-6 space-y-3">
+        <p class="text-gray-700">Os Mistérios Luminosos, também chamados de Mistérios da Luz, foram propostos pelo Papa João Paulo II em 2002. Eles iluminam os momentos centrais da vida pública de Jesus, desde seu batismo até a instituição da Eucaristia.</p>
+        <p class="text-gray-700">Ao meditar nestes mistérios, contemplamos Jesus como a Luz do mundo que veio revelar o Pai e ensinar o caminho da salvação. São momentos em que a divindade de Cristo se manifesta de forma especial, iluminando nossa fé e nos chamando à conversão e ao seguimento.</p>
+        <p class="text-gray-700"><strong>Virtudes a meditar:</strong> Fé, Conversão, Evangelização, Transformação e Comunhão.</p>
+      </div>
+    </div>
+
+    <!-- Como Rezar -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+      <h3 class="text-2xl font-semibold mb-4">Como Rezar Cada Mistério</h3>
+      <div class="bg-[#f5ebe0] rounded-lg p-6 space-y-2 text-sm">
+        <p><strong>1.</strong> Anuncie o mistério e faça uma breve meditação</p>
+        <p><strong>2.</strong> Reze um Pai Nosso</p>
+        <p><strong>3.</strong> Reze dez Ave Marias meditando no mistério</p>
+        <p><strong>4.</strong> Reze um Glória ao Pai</p>
+        <p><strong>5.</strong> Opcionalmente, reze a Oração de Fátima: "Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno, levai as almas todas para o céu, principalmente as que mais precisarem."</p>
+      </div>
+    </div>
+
+    <!-- Os 5 Mistérios -->
+    <div class="space-y-6">
+      <!-- 1º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">1</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">O Batismo de Jesus no Rio Jordão</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Este é o meu Filho amado, em quem me comprazo." (Mt 3,17)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Jesus, sem pecado, desce às águas do Jordão para ser batizado por João Batista. Ao sair da água, os céus se abrem, o Espírito Santo desce sobre Ele em forma de pomba, e a voz do Pai proclama: "Este é o meu Filho amado, em quem me comprazo."</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> O batismo de Jesus marca o início de sua vida pública e revela o mistério da Santíssima Trindade. Ele se solidariza com a humanidade pecadora e nos mostra o caminho da conversão. Nosso próprio batismo nos torna filhos de Deus e membros da Igreja.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Conversão e renovação batismal</p>
+        </div>
+      </div>
+
+      <!-- 2º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">2</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Auto-revelação de Jesus nas Bodas de Caná</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Fazei tudo o que Ele vos disser." (Jo 2,5)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Durante um casamento em Caná da Galileia, o vinho acaba. Maria intercede junto a Jesus, que transforma água em vinho, realizando seu primeiro milagre público. Este sinal manifesta sua glória e seus discípulos creem nele.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> Jesus atende ao pedido de sua Mãe e revela seu poder divino. Maria nos ensina a confiar em Jesus e a fazer tudo o que Ele nos disser. Este milagre também prefigura a Eucaristia e mostra que Jesus veio trazer alegria e plenitude à nossa vida.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Fé na intercessão de Maria e obediência a Cristo</p>
+        </div>
+      </div>
+
+      <!-- 3º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">3</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">O Anúncio do Reino de Deus</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Convertei-vos, porque o Reino dos Céus está próximo." (Mt 4,17)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Jesus percorre cidades e aldeias pregando a Boa Nova do Reino de Deus. Ele ensina através de parábolas, cura os enfermos, expulsa demônios e chama todos à conversão. Seu convite ao arrependimento vem acompanhado do perdão misericordioso dos pecados.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> Jesus nos convida a entrar no Reino de Deus através da conversão do coração. Ele nos mostra que o Reino não é deste mundo, mas está presente onde há amor, justiça e paz. Somos chamados a ser evangelizadores, anunciando Cristo com palavras e ações.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Zelo apostólico e conversão contínua</p>
+        </div>
+      </div>
+
+      <!-- 4º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">4</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Transfiguração de Jesus</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Este é o meu Filho amado; escutai-o!" (Mc 9,7)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Jesus sobe ao monte Tabor com Pedro, Tiago e João. Lá, Ele se transfigura diante deles: seu rosto brilha como o sol e suas vestes ficam brancas como a luz. Moisés e Elias aparecem conversando com Ele. Uma nuvem os cobre e a voz do Pai declara: "Este é o meu Filho amado; escutai-o!"</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> A Transfiguração revela a glória divina de Jesus e fortalece os apóstolos para os sofrimentos que virão. Ela nos mostra que, após a cruz, vem a ressurreição. Somos chamados a escutar Jesus e a nos transformar à sua imagem através da oração e da contemplação.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Contemplação e esperança na glória futura</p>
+        </div>
+      </div>
+
+      <!-- 5º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">5</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Instituição da Eucaristia</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Isto é o meu corpo... Este é o meu sangue." (Mt 26,26-28)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Na Última Ceia, Jesus toma o pão, abençoa, parte e dá aos discípulos dizendo: "Tomai e comei, isto é o meu corpo." Depois toma o cálice e diz: "Este é o meu sangue, derramado por vós e por muitos para remissão dos pecados." Assim institui a Eucaristia e o sacerdócio ministerial.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> A Eucaristia é o maior presente que Jesus nos deixou: Ele mesmo, presente no pão e no vinho consagrados. É o memorial de sua Paixão, Morte e Ressurreição. Ao comungar, nos unimos intimamente a Cristo e recebemos a graça para viver como cristãos autênticos.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Amor eucarístico e comunhão com Cristo</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orações -->
+    <div class="bg-white rounded-xl shadow-md p-6 mt-8">
+      <h3 class="text-2xl font-semibold mb-4">Orações do Rosário</h3>
+      <div class="space-y-4">
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Pai Nosso</p>
+          <p class="text-sm text-gray-700">Pai nosso, que estais nos céus, santificado seja o vosso nome, venha a nós o vosso reino, seja feita a vossa vontade assim na terra como no céu. O pão nosso de cada dia nos dai hoje, perdoai-nos as nossas ofensas assim como nós perdoamos a quem nos tem ofendido, e não nos deixeis cair em tentação, mas livrai-nos do mal. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Ave Maria</p>
+          <p class="text-sm text-gray-700">Ave Maria, cheia de graça, o Senhor é convosco, bendita sois vós entre as mulheres e bendito é o fruto do vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós pecadores, agora e na hora da nossa morte. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Glória ao Pai</p>
+          <p class="text-sm text-gray-700">Glória ao Pai, ao Filho e ao Espírito Santo. Como era no princípio, agora e sempre. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Oração de Fátima (opcional após cada mistério)</p>
+          <p class="text-sm text-gray-700">Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno, levai as almas todas para o céu, principalmente as que mais precisarem.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Adicionado rodapé com copyright -->
+  <footer class="bg-white border-t border-gray-200 mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-6 text-center">
+      <p class="text-sm text-gray-600">
+        © 2025 Raphael Costa. Todos os direitos reservados. Criado para o site da Paróquia Santa Suzana
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

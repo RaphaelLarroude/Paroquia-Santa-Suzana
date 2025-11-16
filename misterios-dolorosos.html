@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mistérios Dolorosos - Paróquia Santa Suzana</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <button onclick="goBack()" class="p-2 hover:bg-gray-100 rounded-lg">
+          <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+        </button>
+        <img src="icone-menu.png" alt="Paróquia Santa Suzana" class="h-12">
+        <div>
+          <h1 class="text-xl font-semibold">Mistérios Dolorosos</h1>
+          <p class="text-sm text-gray-600">Terça-feira e Sexta-feira</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <!-- Banner -->
+    <div class="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 mb-8 text-white">
+      <div class="flex items-center gap-4 mb-3">
+        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-3xl font-light">Mistérios Dolorosos</h2>
+          <p class="text-white/90">Meditações sobre a Paixão de Cristo</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Significado -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+      <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+        </svg>
+        Significado Espiritual
+      </h3>
+      <div class="bg-[#f5ebe0] rounded-lg p-6 space-y-3">
+        <p class="text-gray-700">Os Mistérios Dolorosos nos convidam a contemplar o sofrimento redentor de Jesus Cristo. São meditações sobre sua Paixão, desde a agonia no Horto até sua morte na Cruz. Através destes mistérios, compreendemos a profundidade do amor de Deus por nós.</p>
+        <p class="text-gray-700">Ao rezar estes mistérios, somos chamados a unir nossos sofrimentos aos de Cristo, encontrando sentido redentor em nossas próprias dores. Jesus nos ensina que o caminho para a glória passa pela cruz, e que o amor verdadeiro exige sacrifício e entrega total.</p>
+        <p class="text-gray-700"><strong>Virtudes a meditar:</strong> Contrição, Paciência, Fortaleza, Aceitação da vontade de Deus e Amor sacrificial.</p>
+      </div>
+    </div>
+
+    <!-- Como Rezar -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+      <h3 class="text-2xl font-semibold mb-4">Como Rezar Cada Mistério</h3>
+      <div class="bg-[#f5ebe0] rounded-lg p-6 space-y-2 text-sm">
+        <p><strong>1.</strong> Anuncie o mistério e faça uma breve meditação</p>
+        <p><strong>2.</strong> Reze um Pai Nosso</p>
+        <p><strong>3.</strong> Reze dez Ave Marias meditando no mistério</p>
+        <p><strong>4.</strong> Reze um Glória ao Pai</p>
+        <p><strong>5.</strong> Opcionalmente, reze a Oração de Fátima: "Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno, levai as almas todas para o céu, principalmente as que mais precisarem."</p>
+      </div>
+    </div>
+
+    <!-- Os 5 Mistérios -->
+    <div class="space-y-6">
+      <!-- 1º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">1</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Agonia de Jesus no Horto das Oliveiras</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Pai, se queres, afasta de mim este cálice; contudo, não se faça a minha vontade, mas a tua." (Lc 22,42)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> No Jardim das Oliveiras, Jesus enfrenta uma angústia mortal ao contemplar todos os pecados da humanidade que Ele tomará sobre si. Sua agonia é tão intensa que seu suor se torna como gotas de sangue. Mesmo assim, Ele aceita a vontade do Pai: "Não se faça a minha vontade, mas a tua."</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> Jesus nos ensina a aceitar a vontade de Deus mesmo nos momentos mais difíceis. Sua agonia nos mostra que Ele compreende nossas angústias e medos. Somos chamados a confiar no Pai e a dizer "sim" aos seus planos, mesmo quando não compreendemos.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Conformidade com a vontade de Deus</p>
+        </div>
+      </div>
+
+      <!-- 2º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">2</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Flagelação de Jesus</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Ele foi ferido por causa de nossas transgressões." (Is 53,5)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Pilatos manda açoitar Jesus, esperando que isso satisfaça a multidão. Os soldados O amarram a uma coluna e O flagelam cruelmente com chicotes. Seu corpo sagrado é dilacerado, mas Jesus suporta tudo em silêncio, oferecendo seu sofrimento pela nossa redenção.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> Cada golpe que Jesus recebeu foi por nossos pecados. Ele sofreu em nosso lugar para nos libertar da escravidão do pecado. Este mistério nos convida à contrição sincera e ao arrependimento, reconhecendo que nossos pecados causaram sofrimento ao Salvador.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Mortificação dos sentidos e contrição</p>
+        </div>
+      </div>
+
+      <!-- 3º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">3</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Coroação de Espinhos</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Salve, rei dos judeus!" (Jo 19,3)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Os soldados zombam de Jesus, colocando sobre sua cabeça uma coroa de espinhos que perfura sua fronte. Vestem-no com um manto púrpura, colocam um caniço em sua mão como cetro e O ridicularizam dizendo: "Salve, rei dos judeus!" Cospem nele e O golpeiam na cabeça.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> Jesus, o verdadeiro Rei do Universo, aceita ser humilhado e ridicularizado. Ele nos ensina a humildade e a paciência diante das ofensas. Os espinhos representam nossos pensamentos pecaminosos e orgulho. Cristo os assume para nos purificar.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Humildade e desprezo das honras mundanas</p>
+        </div>
+      </div>
+
+      <!-- 4º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">4</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">Jesus Carrega a Cruz até o Calvário</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Se alguém quer vir após mim, negue-se a si mesmo, tome sua cruz e siga-me." (Mt 16,24)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Jesus, exausto e ferido, carrega a pesada cruz pelas ruas de Jerusalém até o monte Calvário. Ele cai várias vezes sob o peso da cruz, mas sempre se levanta e continua. Encontra sua Mãe, Verônica O enxuga, e Simão O ajuda a carregar a cruz.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> A cruz que Jesus carrega é formada por nossos pecados. Ele nos convida a tomar nossa própria cruz diariamente e segui-lo. Nossas cruzes - sofrimentos, dificuldades, provações - ganham sentido quando unidas à cruz de Cristo. Maria e os discípulos nos ensinam a acompanhar Jesus em seu caminho.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Paciência nas adversidades e perseverança</p>
+        </div>
+      </div>
+
+      <!-- 5º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">5</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Crucificação e Morte de Jesus</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Pai, em tuas mãos entrego o meu espírito." (Lc 23,46)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Jesus é pregado na cruz entre dois ladrões. Mesmo em meio à dor atroz, Ele perdoa seus algozes: "Pai, perdoa-lhes, porque não sabem o que fazem." Confia Maria a João e João a Maria. Após três horas de agonia, exclama: "Está consumado!" e entrega seu espírito ao Pai.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> Na cruz, Jesus realiza a obra da redenção. Seu amor por nós é tão grande que Ele dá sua própria vida para nos salvar. O perdão que Ele oferece aos que O crucificam nos ensina a perdoar sempre. A cruz que é instrumento de morte torna-se fonte de vida eterna. Ao pé da cruz, Maria se torna Mãe de todos nós.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Amor a Deus e ao próximo, perdão e entrega total</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orações -->
+    <div class="bg-white rounded-xl shadow-md p-6 mt-8">
+      <h3 class="text-2xl font-semibold mb-4">Orações do Rosário</h3>
+      <div class="space-y-4">
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Pai Nosso</p>
+          <p class="text-sm text-gray-700">Pai nosso, que estais nos céus, santificado seja o vosso nome, venha a nós o vosso reino, seja feita a vossa vontade assim na terra como no céu. O pão nosso de cada dia nos dai hoje, perdoai-nos as nossas ofensas assim como nós perdoamos a quem nos tem ofendido, e não nos deixeis cair em tentação, mas livrai-nos do mal. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Ave Maria</p>
+          <p class="text-sm text-gray-700">Ave Maria, cheia de graça, o Senhor é convosco, bendita sois vós entre as mulheres e bendito é o fruto do vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós pecadores, agora e na hora da nossa morte. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Glória ao Pai</p>
+          <p class="text-sm text-gray-700">Glória ao Pai, ao Filho e ao Espírito Santo. Como era no princípio, agora e sempre. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Oração de Fátima (opcional após cada mistério)</p>
+          <p class="text-sm text-gray-700">Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno, levai as almas todas para o céu, principalmente as que mais precisarem.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Adicionando rodapé com copyright -->
+  <footer class="bg-white border-t border-gray-200 mt-12 py-6">
+    <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-600">
+      <p>© 2025 Raphael Costa. Todos os direitos reservados. Criado para o site da Paróquia Santa Suzana</p>
+    </div>
+  </footer>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

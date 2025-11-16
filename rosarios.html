@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosários - Paróquia Santa Suzana</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .mystery-card {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <button onclick="goBack()" class="p-2 hover:bg-gray-100 rounded-lg">
+          <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+        </button>
+        <img src="icone-menu.png" alt="Paróquia Santa Suzana" class="h-12">
+        <div>
+          <h1 class="text-xl font-semibold">Rosários Católicos</h1>
+          <p class="text-sm text-gray-600">Paróquia Santa Suzana</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <!-- Welcome Banner -->
+    <div class="bg-gradient-to-r from-[#dc143c] to-[#b01030] rounded-2xl p-8 mb-8 text-white">
+      <h2 class="text-3xl font-light mb-2">Santo Rosário</h2>
+      <p class="text-white/90">Medite nos mistérios da vida de Jesus e Maria através da oração do terço</p>
+    </div>
+
+    <!-- Instructions -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+      <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+        <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        Como Rezar o Rosário
+      </h3>
+      <div class="bg-[#f5ebe0] rounded-lg p-6 space-y-3 text-sm">
+        <p><strong>1.</strong> Faça o Sinal da Cruz e reze o Credo</p>
+        <p><strong>2.</strong> Reze um Pai Nosso</p>
+        <p><strong>3.</strong> Reze três Ave Marias</p>
+        <p><strong>4.</strong> Reze um Glória ao Pai</p>
+        <p><strong>5.</strong> Anuncie o primeiro mistério e reze um Pai Nosso</p>
+        <p><strong>6.</strong> Reze dez Ave Marias meditando no mistério</p>
+        <p><strong>7.</strong> Reze um Glória ao Pai</p>
+        <p><strong>8.</strong> Repita os passos 5-7 para cada um dos cinco mistérios</p>
+        <p><strong>9.</strong> Ao final, reze a Salve Rainha</p>
+      </div>
+    </div>
+
+    <!-- Mysteries Grid -->
+    <div class="grid md:grid-cols-2 gap-6 items-start">
+      <!-- Mistérios Gozosos -->
+      <div class="bg-white rounded-xl shadow-md p-6 card-hover mystery-card" onclick="window.location.href='misterios-gozosos.html'">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">Mistérios Gozosos</h3>
+              <p class="text-sm text-gray-600">Segunda e Sábado</p>
+            </div>
+          </div>
+          <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+        
+        <div class="space-y-2 text-sm text-gray-600">
+          <p>• A Anunciação do Anjo Gabriel a Maria</p>
+          <p>• A Visitação de Maria a sua prima Isabel</p>
+          <p>• O Nascimento de Jesus em Belém</p>
+          <p>• A Apresentação do Menino Jesus no Templo</p>
+          <p>• A Perda e o Encontro do Menino Jesus no Templo</p>
+        </div>
+      </div>
+
+      <!-- Mistérios Luminosos -->
+      <div class="bg-white rounded-xl shadow-md p-6 card-hover mystery-card" onclick="window.location.href='misterios-luminosos.html'">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">Mistérios Luminosos</h3>
+              <p class="text-sm text-gray-600">Quinta-feira</p>
+            </div>
+          </div>
+          <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+        
+        <div class="space-y-2 text-sm text-gray-600">
+          <p>• O Batismo de Jesus no Rio Jordão</p>
+          <p>• A Auto-revelação de Jesus nas Bodas de Caná</p>
+          <p>• O Anúncio do Reino de Deus</p>
+          <p>• A Transfiguração de Jesus</p>
+          <p>• A Instituição da Eucaristia</p>
+        </div>
+      </div>
+
+      <!-- Mistérios Dolorosos -->
+      <div class="bg-white rounded-xl shadow-md p-6 card-hover mystery-card" onclick="window.location.href='misterios-dolorosos.html'">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">Mistérios Dolorosos</h3>
+              <p class="text-sm text-gray-600">Terça e Sexta-feira</p>
+            </div>
+          </div>
+          <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+        
+        <div class="space-y-2 text-sm text-gray-600">
+          <p>• A Agonia de Jesus no Horto das Oliveiras</p>
+          <p>• A Flagelação de Jesus</p>
+          <p>• A Coroação de Espinhos</p>
+          <p>• Jesus Carrega a Cruz até o Calvário</p>
+          <p>• A Crucificação e Morte de Jesus</p>
+        </div>
+      </div>
+
+      <!-- Mistérios Gloriosos -->
+      <div class="bg-white rounded-xl shadow-md p-6 card-hover mystery-card" onclick="window.location.href='misterios-gloriosos.html'">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-white border-2 border-[#dc143c] rounded-full flex items-center justify-center">
+              <svg class="w-7 h-7 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">Mistérios Gloriosos</h3>
+              <p class="text-sm text-gray-600">Quarta e Domingo</p>
+            </div>
+          </div>
+          <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+        
+        <div class="space-y-2 text-sm text-gray-600">
+          <p>• A Ressurreição de Jesus</p>
+          <p>• A Ascensão de Jesus ao Céu</p>
+          <p>• A Vinda do Espírito Santo sobre os Apóstolos</p>
+          <p>• A Assunção de Maria ao Céu</p>
+          <p>• A Coroação de Maria como Rainha do Céu e da Terra</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orações do Rosário -->
+    <div class="bg-white rounded-xl shadow-md p-6 mt-8">
+      <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+        <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+        </svg>
+        Orações do Rosário
+      </h3>
+      
+      <div class="space-y-4">
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Pai Nosso</p>
+          <p class="text-sm text-gray-700">Pai nosso, que estais nos céus, santificado seja o vosso nome, venha a nós o vosso reino, seja feita a vossa vontade assim na terra como no céu. O pão nosso de cada dia nos dai hoje, perdoai-nos as nossas ofensas assim como nós perdoamos a quem nos tem ofendido, e não nos deixeis cair em tentação, mas livrai-nos do mal. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Ave Maria</p>
+          <p class="text-sm text-gray-700">Ave Maria, cheia de graça, o Senhor é convosco, bendita sois vós entre as mulheres e bendito é o fruto do vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós pecadores, agora e na hora da nossa morte. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Glória ao Pai</p>
+          <p class="text-sm text-gray-700">Glória ao Pai, ao Filho e ao Espírito Santo. Como era no princípio, agora e sempre. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Salve Rainha</p>
+          <p class="text-sm text-gray-700">Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva. A vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei. E depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre. Ó clemente, ó piedosa, ó doce sempre Virgem Maria. Rogai por nós, Santa Mãe de Deus, para que sejamos dignos das promessas de Cristo. Amém.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Adicionando rodapé com copyright -->
+  <footer class="bg-white border-t border-gray-200 mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-600">
+      <p>© 2025 Raphael Costa. Todos os direitos reservados. Criado para o site da Paróquia Santa Suzana</p>
+    </div>
+  </footer>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

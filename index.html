@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paróquia Santa Suzana - Bem-vindo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+      color: #2c2c2c;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #f5ebe0 0%, #e8ddd0 100%);
+    }
+    
+    .text-balance {
+      text-wrap: balance;
+    }
+    
+    .smooth-scroll {
+      scroll-behavior: smooth;
+    }
+    
+    nav {
+      transition: all 0.3s ease;
+    }
+    
+    nav.scrolled {
+      background-color: rgba(250, 248, 245, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn-primary {
+      background-color: #dc143c;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+    
+    .btn-primary:hover {
+      background-color: #b01030;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(220, 20, 60, 0.3);
+    }
+    
+    .btn-secondary {
+      background-color: transparent;
+      color: #dc143c;
+      padding: 14px 32px;
+      border: 2px solid #dc143c;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+    
+    .btn-secondary:hover {
+      background-color: #dc143c;
+      color: white;
+    }
+    
+    /* Improved mobile menu styling */
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+    
+    .mobile-menu.active {
+      max-height: 500px;
+    }
+    
+    .hamburger {
+      cursor: pointer;
+      width: 28px;
+      height: 24px;
+      position: relative;
+      transition: 0.3s;
+    }
+    
+    .hamburger span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: #dc143c;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transition: 0.25s ease-in-out;
+    }
+    
+    .hamburger span:nth-child(1) {
+      top: 0px;
+    }
+    
+    .hamburger span:nth-child(2) {
+      top: 10px;
+    }
+    
+    .hamburger span:nth-child(3) {
+      top: 20px;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+      top: 10px;
+      transform: rotate(135deg);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+      left: -60px;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+      top: 10px;
+      transform: rotate(-135deg);
+    }
+
+    .dropdown {
+      position: relative;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      z-index: 1;
+      border-radius: 8px;
+      padding: 8px 0;
+      top: 100%;
+      margin-top: 8px;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .dropdown-content a {
+      color: #2c2c2c;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.2s;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #f5ebe0;
+    }
+    
+    /* Better mobile responsive breakpoints */
+    @media (max-width: 768px) {
+      .desktop-menu {
+        display: none;
+      }
+      
+      /* Mobile-optimized typography */
+      h1 {
+        font-size: 2rem !important;
+      }
+      
+      h2 {
+        font-size: 1.75rem !important;
+      }
+      
+      h3 {
+        font-size: 1.5rem !important;
+      }
+      
+      /* Mobile-optimized padding */
+      section {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+      }
+      
+      /* Mobile-optimized buttons */
+      .btn-primary, .btn-secondary {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+      }
+      
+      /* Mobile-optimized cards */
+      .card-hover:hover {
+        transform: none;
+      }
+    }
+    
+    /* Touch-friendly tap targets */
+    @media (max-width: 768px) {
+      a, button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    /* Added lightbox modal styles for image enlargement */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-modal-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-modal-image {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 8px;
+      animation: zoomIn 0.3s ease-in;
+    }
+
+    .lightbox-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 28px;
+      color: #2c2c2c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 1001;
+    }
+
+    .lightbox-modal-close:hover {
+      background-color: #dc143c;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .lightbox-modal-title {
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 16px;
+      text-align: center;
+      max-width: 80vw;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .lightbox-modal-close {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        top: 10px;
+        right: 10px;
+      }
+
+      .lightbox-modal-image {
+        max-height: 70vh;
+      }
+
+      .lightbox-modal-title {
+        font-size: 1rem;
+        margin-top: 12px;
+      }
+    }
+  </style>
+</head>
+<body class="smooth-scroll">
+  
+  <!-- Navigation -->
+  <!-- Improved mobile navigation with better touch targets -->
+  <nav id="navbar" class="fixed w-full top-0 z-50 py-3 px-4 md:py-4 md:px-12">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="icone-menu.png" alt="Paróquia Santa Suzana" class="h-12 md:h-20">
+      </div>
+      
+      <!-- Desktop Menu -->
+      <div class="desktop-menu hidden md:flex items-center gap-8">
+        <div class="dropdown">
+          <a href="#paroquia" class="text-sm font-medium text-[#dc143c] hover:text-[#b01030] transition-colors cursor-pointer">Paróquia</a>
+          <div class="dropdown-content">
+            <a href="#padroeira">Padroeira</a>
+            <a href="#historia">História</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#nova-matriz" class="text-sm font-medium text-[#dc143c] hover:text-[#b01030] transition-colors cursor-pointer">Nova Matriz</a>
+        </div>
+        <div class="dropdown">
+          <a href="#pastorais" class="text-sm font-medium text-[#dc143c] hover:text-[#b01030] transition-colors cursor-pointer">Pastorais</a>
+          <div class="dropdown-content">
+            <a href="#pastoral-familiar">Pastoral Familiar</a>
+            <a href="#pastoral-batismo">Pastoral do Batismo</a>
+            <a href="#pastoral-catequese">Pastoral Catequética</a>
+            <a href="#pastoral-jovens">Pastoral dos Jovens</a>
+          </div>
+        </div>
+        <a href="#movimentos" class="text-sm font-medium text-[#dc143c] hover:text-[#b01030] transition-colors">Movimentos/Organismos</a>
+        <a href="#contato" class="text-sm font-medium text-[#dc143c] hover:text-[#b01030] transition-colors">Contato</a>
+      </div>
+      
+      <!-- Improved mobile menu button with animated hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
+    <!-- Improved mobile menu with better spacing and touch targets -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+      <div class="flex flex-col gap-1 px-4 py-4 bg-white rounded-lg mt-4 shadow-lg">
+        <a href="#paroquia" class="text-base font-medium text-[#dc143c] py-3 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors">Paróquia</a>
+        <a href="#padroeira" class="text-sm text-gray-700 py-2 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors">Padroeira</a>
+        <a href="#historia" class="text-sm text-gray-700 py-2 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors">História</a>
+        <a href="#nova-matriz" class="text-base font-medium text-[#dc143c] py-3 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors">Nova Matriz</a>
+        <a href="#pastorais" class="text-base font-medium text-[#dc143c] py-3 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors">Pastorais</a>
+        <a href="#pastoral-familiar" class="text-sm text-gray-700 py-2 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors">Pastoral Familiar</a>
+        <a href="#pastoral-batismo" class="text-sm text-gray-700 py-2 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors">Pastoral do Batismo</a>
+        <a href="#pastoral-catequese" class="text-sm text-gray-700 py-2 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors">Pastoral Catequética</a>
+        <a href="#pastoral-jovens" class="text-sm text-gray-700 py-2 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors">Pastoral dos Jovens</a>
+        <a href="#movimentos" class="text-base font-medium text-[#dc143c] py-3 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors">Movimentos/Organismos</a>
+        <a href="#contato" class="text-base font-medium text-[#dc143c] py-3 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero-gradient pt-24 md:pt-32 pb-12 md:pb-20 px-4 md:px-12">
+    <div class="max-w-7xl mx-auto">
+      <!-- Mobile-optimized social media icons -->
+      <div class="flex justify-center gap-4 md:gap-8 mb-8 md:mb-12 overflow-x-auto pb-2">
+        <!-- Atualizando link do Facebook -->
+        <a href="https://www.facebook.com/paroquiadesantasuzana/?locale=pt_BR" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 text-[#dc143c] hover:text-[#b01030] transition-colors min-w-[70px]">
+          <div class="w-12 h-12 md:w-16 md:h-16 border-2 border-[#dc143c] rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </div>
+          <span class="text-xs md:text-sm">Facebook</span>
+        </a>
+        <!-- Atualizando link do Instagram -->
+        <a href="https://www.instagram.com/paroquiadesantasuzana/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 text-[#dc143c] hover:text-[#b01030] transition-colors min-w-[70px]">
+          <div class="w-12 h-12 md:w-16 md:h-16 border-2 border-[#dc143c] rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </div>
+          <span class="text-xs md:text-sm">Instagram</span>
+        </a>
+        <!-- Atualizando link do YouTube -->
+        <a href="https://www.youtube.com/channel/UCSGsf0MEA8dcYCvQpS_R7VA" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 text-[#dc143c] hover:text-[#b01030] transition-colors min-w-[70px]">
+          <div class="w-12 h-12 md:w-16 md:h-16 border-2 border-[#dc143c] rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </div>
+          <span class="text-xs md:text-sm">YouTube</span>
+        </a>
+        <!-- Atualizando link do WhatsApp -->
+        <a href="https://api.whatsapp.com/send?phone=551137424754" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 text-[#dc143c] hover:text-[#b01030] transition-colors min-w-[70px]">
+          <div class="w-12 h-12 md:w-16 md:h-16 border-2 border-[#dc143c] rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <span class="text-xs md:text-sm">WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="bg-gradient-to-r from-[#4a1a1a] to-[#2c1010] rounded-xl md:rounded-2xl overflow-hidden mb-8 md:mb-12">
+        <!-- Substituindo imagem do hero pela imagem de benfeitores -->
+        <img src="benfeitores-de-santa-suzana.png" 
+             alt="Benfeitores de Santa Suzana - Juntos Por Um Sonho De Fé" 
+             class="w-full h-auto object-cover">
+      </div>
+
+      <!-- Mobile-optimized avisos paroquiais -->
+      <div class="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg">
+        <h2 class="text-2xl md:text-3xl font-light mb-6 md:mb-8 text-center">Avisos Paroquiais</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-8">
+          <!-- Missas -->
+          <div>
+            <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-[#dc143c]">MISSAS</h3>
+            <div class="space-y-3 text-gray-700 text-sm md:text-base">
+              <div>
+                <p class="font-semibold">SEGUNDA A SEXTA</p>
+                <p>18h - Capela da Imaculada - Rua Paulo Sérgio de Macedo, 197</p>
+              </div>
+              <div>
+                <p class="font-semibold">SÁBADO</p>
+                <p>18h - Capela da Imaculada - Rua Paulo Sérgio de Macedo, 197</p>
+              </div>
+              <div>
+                <p class="font-semibold">DOMINGO</p>
+                <p>8h00 - Capela da Imaculada - Rua Paulo Sérgio de Macedo, 197</p>
+                <p>10h30 - Comunidade São Paulo Apóstolo - Sede Social do SPFC - Embaixo portão 5</p>
+                <p>11h e 18h - Salão Paroquial - Rua David Ben Gurion, 777</p>
+                <p>18h - Comunidade Nossa Senhora das Graças - Exclusivo para moradores do Condomínio Portal do Morumbi</p>
+              </div>
+              <p class="text-xs md:text-sm italic mt-4">Transmissão pelo Canal do Youtube da Paróquia e Página do Facebook das missas dos Domingos às 18h e Solenidades</p>
+            </div>
+          </div>
+
+          <!-- Secretaria Paroquial -->
+          <div>
+            <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-[#dc143c]">SECRETARIA PAROQUIAL</h3>
+            <div class="space-y-3 text-gray-700 text-sm md:text-base">
+              <div>
+                <p class="font-semibold">Terça a Sábado</p>
+                <p>8h30 às 12h e das 14h às 17h</p>
+              </div>
+              <div>
+                <p class="font-semibold">Tel e WhatsApp:</p>
+                <p>(11) 3742-4754</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile-optimized event cards grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <div class="rounded-lg overflow-hidden card-hover">
+            <!-- Added beige background container to image and text -->
+            <div class="bg-[#f5ebe0] rounded-lg p-3 md:p-4">
+              <img src="retiroquaresmal.png" alt="Retiro Quaresmal" class="w-full max-w-sm max-h-96 object-contain rounded-md mb-3 cursor-pointer">
+              <!-- Changed "Ficha de Inscrição" to a link to Google Form -->
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdc5STu6bmn5wKi2FNXoC6U-3vCFbkfaYmMuSvF5F_HQsbCRQ/viewform" target="_blank" rel="noopener noreferrer" class="text-xs md:text-sm text-[#dc143c] hover:underline font-semibold">Ficha de Inscrição</a>
+            </div>
+          </div>
+
+          <div class="rounded-lg overflow-hidden card-hover">
+            <!-- Added beige background container to image and text -->
+            <div class="bg-[#f5ebe0] rounded-lg p-3 md:p-4">
+              <img src="coralinfantil.png" alt="Coral Infantil" class="w-full max-w-sm max-h-96 object-contain rounded-md mb-3 cursor-pointer">
+              <p class="text-xs md:text-sm text-gray-600">Venha fazer parte do Coral Infantil da nossa Paróquia!</p>
+            </div>
+          </div>
+
+          <div class="rounded-lg overflow-hidden card-hover">
+            <!-- Added beige background container to image and text -->
+            <div class="bg-[#f5ebe0] rounded-lg p-3 md:p-4">
+              <img src="vindeevede.png" alt="Vinde e Vede" class="w-full max-w-sm max-h-96 object-contain rounded-md mb-3 cursor-pointer">
+              <!-- Transform text into clickable links for both registration form and schedule -->
+              <div class="flex gap-2 text-xs md:text-sm">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdc5STu6bmn5wKi2FNXoC6U-3vCFbkfaYmMuSvF5F_HQsbCRQ/viewform" target="_blank" rel="noopener noreferrer" class="text-[#dc143c] hover:underline font-semibold">Ficha de Inscrição</a>
+                <span class="text-gray-600">|</span>
+                <a href="https://santasuzana.org.br/Programacao_2025_Vinde_Vede.pdf" target="_blank" rel="noopener noreferrer" class="text-[#dc143c] hover:underline font-semibold">Programação</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-lg overflow-hidden card-hover">
+            <!-- Added beige background container to image and text -->
+            <div class="bg-[#f5ebe0] rounded-lg p-3 md:p-4">
+              <img src="adorar-senhor.png" alt="Venha Adorar o Senhor" class="w-full max-w-sm max-h-96 object-contain rounded-md mb-3 cursor-pointer">
+              <p class="text-xs md:text-sm text-gray-600">Venha Adorar o Senhor</p>
+            </div>
+          </div>
+
+          <div class="rounded-lg overflow-hidden card-hover">
+            <!-- Added beige background container to image and text -->
+            <div class="bg-[#f5ebe0] rounded-lg p-3 md:p-4">
+              <img src="pastoral-escuta.png" alt="Pastoral da Escuta" class="w-full max-w-sm max-h-96 object-contain rounded-md mb-3 cursor-pointer">
+              <p class="text-xs md:text-sm text-gray-600">Horários disponíveis para atendimento</p>
+            </div>
+          </div>
+
+          <div class="rounded-lg overflow-hidden card-hover">
+            <!-- Added beige background container to image and text -->
+            <div class="bg-[#f5ebe0] rounded-lg p-3 md:p-4">
+              <img src="grupo-oracao.png" alt="Grupo de Oração" class="w-full max-w-sm max-h-96 object-contain rounded-md mb-3 cursor-pointer">
+              <p class="text-xs md:text-sm text-gray-600">Quintas 21h30</p>
+            </div>
+          </div>
+
+          <div class="rounded-lg overflow-hidden card-hover">
+            <!-- Added beige background container to image and text -->
+            <div class="bg-[#f5ebe0] rounded-lg p-3 md:p-4">
+              <img src="terco-homens.png" alt="Terço dos Homens" class="w-full max-w-sm max-h-96 object-contain rounded-md mb-3 cursor-pointer">
+              <p class="text-xs md:text-sm text-gray-600">Todas as terças-feiras às 20h30</p>
+            </div>
+          </div>
+
+          <div class="rounded-lg overflow-hidden card-hover">
+            <!-- Added beige background container to image and text -->
+            <div class="bg-[#f5ebe0] rounded-lg p-3 md:p-4">
+              <img src="coral-st-suzana.png" alt="Coral Santa Suzana" class="w-full max-w-sm max-h-96 object-contain rounded-md mb-3 cursor-pointer">
+              <p class="text-xs md:text-sm text-gray-600">Venha fazer parte do Coral da nossa Paróquia!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Added Comunidades Section -->
+  <section id="comunidades" class="py-20 px-6 md:px-12 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-light mb-4">Comunidades</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Imaculada Conceição -->
+        <div class="bg-[#f5ebe0] rounded-lg overflow-hidden card-hover">
+          <img src="Imaculada-conceição.png" 
+               alt="Capela Imaculada Conceição" 
+               class="w-full h-48 object-cover cursor-pointer">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-center">Imaculada Conceição</h3>
+            <p class="text-sm text-gray-700 mb-2">Rua Paulo Sérgio de Macedo, 197<br>Vila Sônia, 05639-040 São Paulo</p>
+            <div class="mt-4">
+              <p class="text-sm font-semibold text-[#dc143c]">Matriz Provisória</p>
+              <p class="text-sm font-semibold mt-2">Missas</p>
+              <p class="text-sm text-gray-700">Segunda a Sábado: 18h</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Santa Suzana -->
+        <div class="bg-[#f5ebe0] rounded-lg overflow-hidden card-hover">
+          <img src="Santa-Suzana.png" 
+               alt="Capela Santa Suzana" 
+               class="w-full h-48 object-cover cursor-pointer">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-center">Santa Suzana</h3>
+            <p class="text-sm text-gray-700 mb-2">Rua David Ben Gurion, 777<br>Jd. Monte Kemel, São Paulo</p>
+            <div class="mt-4">
+              <p class="text-sm font-semibold">Missas</p>
+              <p class="text-sm text-gray-700">Sábados: 20h (Caminho Neocatecumenal)</p>
+              <p class="text-sm text-gray-700">Domingo: 11h e 18h</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- São Paulo Apóstolo -->
+        <div class="bg-[#f5ebe0] rounded-lg overflow-hidden card-hover">
+          <img src="Sao-Paulo-Apostolo.png" 
+               alt="São Paulo Apóstolo" 
+               class="w-full h-48 object-cover cursor-pointer">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-center">São Paulo Apóstolo</h3>
+            <p class="text-sm text-gray-700 mb-2">Av. Jules Rimet, Portão 5 SPFC<br>Morumbi, 05653-070 São Paulo</p>
+            <div class="mt-4">
+              <p class="text-sm font-semibold">Missas</p>
+              <p class="text-sm text-gray-700">Dom: 10h30</p>
+            </div>
+            <a href="https://comunidadesaopauloapostolo.com/" target="_blank" rel="noopener noreferrer" class="text-sm text-[#dc143c] hover:underline mt-2 inline-block font-semibold">Acesse o site</a>
+          </div>
+        </div>
+
+        <!-- Nossa Senhora das Graças -->
+        <div class="bg-[#f5ebe0] rounded-lg overflow-hidden card-hover">
+          <img src="Nossa-Senhora-das-Gracas-Portal.png" 
+               alt="Nossa Senhora das Graças - Portal do Morumbi" 
+               class="w-full h-48 object-cover cursor-pointer">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-center">Nossa Senhora das Graças (Portal do Morumbi)</h3>
+            <div class="mt-4">
+              <p class="text-sm font-semibold">Missas</p>
+              <p class="text-sm text-gray-700">Domingo: 18h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Added Padres Section -->
+  <section id="padres" class="py-20 px-6 md:px-12 bg-[#f5ebe0]">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-light mb-4">Padres</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Padre Manoel -->
+        <div class="bg-white rounded-lg p-8 card-hover">
+          <div class="text-center mb-6">
+            <!-- Substituindo placeholder pela foto real do Padre Manoel -->
+            <img src="Padre-Manoel-Correa-Viana-Neto.png" 
+                 alt="Padre Manoel Corrêa Viana Neto" 
+                 class="w-32 h-32 rounded-full mx-auto mb-4 object-cover cursor-pointer">
+            <h3 class="text-xl font-semibold mb-2">Padre Manoel Corrêa Viana Neto</h3>
+          </div>
+          <div class="text-sm text-gray-700 leading-relaxed space-y-3">
+            <p>Nasceu no dia 3 de julho em Formosa - GO. Aos 17 anos sentiu o chamado para ser sacerdote.</p>
+            <p>Frequentou o Grupo de Orientação Vocacional – GOV – da Arquidiocese de São Paulo, sendo na época crisnado pelo Cardeal Dom Paulo Evaristo Arns.</p>
+            <p>Aos 25 anos entrava no Mosteiro de São Bento, onde ficou por aproximadamente cinco anos. Sentindo a necessidade de um trabalho mais próximo do Povo de Deus, pediu dispensa dos votos e fixou-se na Diocese de Campo Limpo, onde, aos 29 de junho de 1996.</p>
+            <p>No ano de 2011 foi convidado para fazer parte da Venerável Ordem Equestre do Santo Sepulcro de Jerusalém como Cavaleiro.</p>
+            <p>Desde 2015 exerce a função de Vigário Episcopal da Região 4 (Foranias Morumbi e Taboão da Serra).</p>
+          </div>
+        </div>
+
+        <!-- Padre José -->
+        <div class="bg-white rounded-lg p-8 card-hover">
+          <div class="text-center mb-6">
+            <!-- Substituindo placeholder pela foto real do Padre José -->
+            <img src="Padre-Jose-Bortolini.png" 
+                 alt="Padre José Bortolini" 
+                 class="w-32 h-32 rounded-full mx-auto mb-4 object-cover cursor-pointer">
+            <h3 class="text-xl font-semibold mb-2">Padre José Bortolini</h3>
+          </div>
+          <div class="text-sm text-gray-700 leading-relaxed space-y-3">
+            <p>Pe. José Bortolini nasceu em Bento Gonçalves (RS) aos 15 de Abril de 1952. Foi ordenado Presbítero por Dom Francisco Manuel Vieira, então Bispo da Região Episcopal Osasco (São Paulo) no dia 4 de dezembro de 1977.</p>
+            <p>É Mestre em Sagrada Escritura pelo Pontifício Instituto Bíblico de Roma, e escreveu vários livros na área bíblica. Colaborou na preparação das principais edições de Bíblia em língua portuguesa.</p>
+          </div>
+        </div>
+
+        <!-- Frei Guilherme -->
+        <div class="bg-white rounded-lg p-8 card-hover">
+          <div class="text-center mb-6">
+            <!-- Substituindo placeholder pela foto real do Frei Guilherme -->
+            <img src="Frei-Guilherme-Pereira-Anselmo-Junior.png" 
+                 alt="Frei Guilherme Pereira Anselmo Júnior" 
+                 class="w-32 h-32 rounded-full mx-auto mb-4 object-cover cursor-pointer">
+            <h3 class="text-xl font-semibold mb-2">Frei Guilherme Pereira Anselmo Júnior, sja</h3>
+          </div>
+          <div class="text-sm text-gray-700 leading-relaxed space-y-3">
+            <p>Nasceu no dia 21 de julho de 1971, em São Paulo - SP</p>
+            <p>Na juventude, sentiu-se chamado e trilhou um breve caminho na vida consagrada e monástica. Para cuidar da família, saiu e foi trabalhar e estudar. Cursou Letras, habilitando-se em Língua Grega Antiga. Trabalhou por anos no comércio internacional, em gerenciamento de importação, numa empresa grega.</p>
+            <p>Retornando à vida consagrada com 30 anos, fez-se frade inaciano. Cursou Filosofia/Teologia. Foi ordenado padre em 2012 na Basílica Nossa Senhora da Assunção, junto ao Mosteiro de São Bento, em São Paulo - SP.</p>
+            <p>Concluiu Mestrado em Teologia (Bíblia) na PUC/SP em 2015 e, desde então, é professor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Added Nova Matriz Section -->
+  <section id="nova-matriz" class="py-20 px-6 md:px-12 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-light mb-4">Matriz Paroquial de Santa Suzana</h2>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="mb-12">
+        <!-- Substituindo placeholder pela imagem real da Matriz -->
+        <img src="Matriz-Paroquial-de-Santa-Suzana.png" 
+             alt="Nova Matriz Paroquial" 
+             class="w-full h-96 object-cover rounded-2xl shadow-lg cursor-pointer">
+      </div>
+
+      <!-- Project Description -->
+      <div class="grid md:grid-cols-2 gap-12 mb-12">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Descrição geral do projeto</h3>
+          <div class="text-gray-700 leading-relaxed space-y-4">
+            <p>A <strong>Matriz Paroquial de Santa Suzana</strong> foi projetada para atender às necessidades pastorais da nossa Paróquia.</p>
+            <p>Entre as várias opções arquitetônicas e estéticas, foi escolhida a que melhor demonstra a reconciliação do Concílio Vaticano II e, ao mesmo tempo, apresentasse uma obra bela e harmosa entre os seus edifícios.</p>
+            <p>O projeto do projeto arquitetônico foi, portanto, o desejo de construir uma Matriz Paroquial que possa ser um sinal visual e perceptível da beleza da vida cristã e, assim, "guiar a chamar toda a humanidade para a casa de Deus" (SC, 1).</p>
+            <p>Assim, a matriz paroquial possui três edifícios principais:</p>
+            <ul class="list-disc list-inside space-y-2 ml-4">
+              <li><strong>A Matriz Paroquial:</strong> Deus no centro, assim como a Igreja é a meta para a qual se encaminha a ação do Evangelho e a busca das razões de crer.</li>
+              <li><strong>O Centro Pastoral:</strong> com espaços próprios para catequese, reuniões, orações e pequenas celebrações, posto que, no homem, antes de poderem participar na Liturgia, é preciso que sejam chamados à fé e à conversão (SC, 9).</li>
+              <li><strong>O Centro Social e de Formação para o Trabalho (Cáritas):</strong> onde de forma concreta, "o espírito consistirá da Igreja e o que é o seu dever de caridade, de piedade e apostolado, onde os cristãos possam receber que é o seu dever de caridade" (SC, 10).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="bg-[#f5ebe0] p-8 rounded-lg mb-6">
+            <p class="text-center text-xl font-semibold text-[#dc143c] mb-4">Juntos, edificamos o Reino de Deus!</p>
+            <!-- atualizando link do botão para o site dos Benfeitores de Santa Suzana -->
+            <a href="https://www.benfeitoresdesantasuzana.com/" target="_blank" rel="noopener noreferrer" class="btn-primary w-full text-center block">Seja Um Benfeitor de Santa Suzana</a>
+          </div>
+
+          <!-- Gallery -->
+          <!-- Substituindo placeholders pelas imagens reais dos renders internos -->
+          <div class="grid grid-cols-2 gap-4">
+            <img src="Juntos-edificamos-o-Reino-de-Deus-1.png" 
+                 alt="Interior da Matriz - Vista 1" 
+                 class="w-full h-40 object-cover rounded-lg cursor-pointer">
+            <img src="Juntos-edificamos-o-Reino-de-Deus-2.png" 
+                 alt="Interior da Matriz - Vista 2" 
+                 class="w-full h-40 object-cover rounded-lg cursor-pointer">
+            <img src="Juntos-edificamos-o-Reino-de-Deus-3.png" 
+                 alt="Interior da Matriz - Vista 3" 
+                 class="w-full h-40 object-cover rounded-lg cursor-pointer">
+            <img src="Juntos-edificamos-o-Reino-de-Deus-4.png" 
+                 alt="Exterior da Matriz" 
+                 class="w-full h-40 object-cover rounded-lg cursor-pointer">
+          </div>
+        </div>
+      </div>
+
+      <!-- Floor Plans -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-semibold mb-6 text-center">Plantas</h3>
+        <p class="text-center text-gray-600 mb-8">(Clique nas figuras para vê-las ampliadas)</p>
+        <!-- Substituindo placeholders pelas plantas arquitetônicas reais -->
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="text-center">
+            <img src="Matriz-Paroquial.png" 
+                 alt="Planta Matriz Paroquial" 
+                 class="w-full h-64 object-contain bg-white p-4 rounded-lg shadow-md mb-2 cursor-pointer hover:shadow-lg transition-shadow">
+            <p class="text-sm font-semibold">Matriz Paroquial</p>
+          </div>
+          <div class="text-center">
+            <img src="Centro-Pastoral-Terreo.png" 
+                 alt="Planta Centro Pastoral Térreo" 
+                 class="w-full h-64 object-contain bg-white p-4 rounded-lg shadow-md mb-2 cursor-pointer hover:shadow-lg transition-shadow">
+            <p class="text-sm font-semibold">Centro Pastoral Térreo</p>
+          </div>
+          <div class="text-center">
+            <img src="Centro-Pastoral-1º-Andar.png" 
+                 alt="Planta Centro Pastoral 1º Andar" 
+                 class="w-full h-64 object-contain bg-white p-4 rounded-lg shadow-md mb-2 cursor-pointer hover:shadow-lg transition-shadow">
+            <p class="text-sm font-semibold">Centro Pastoral 1º Andar</p>
+          </div>
+          <div class="text-center">
+            <img src="Casa-Paroquial.png" 
+                 alt="Planta Casa Paroquial" 
+                 class="w-full h-64 object-contain bg-white p-4 rounded-lg shadow-md mb-2 cursor-pointer hover:shadow-lg transition-shadow">
+            <p class="text-sm font-semibold">Casa Paroquial</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Architecture Details -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-6">Detalhes da arquitetura da Igreja Matriz</h3>
+        <div class="text-gray-700 leading-relaxed space-y-4">
+          <p>A Matriz Paroquial tem capacidade para 600 pessoas. Ao seu lado e integrada a ela está a Capela do Santíssimo e um hall de circulação que integra a Matriz ao Centro Pastoral. Faz parte ainda da Matriz e a torre com o campanário, referência de sacralização e chamamento para os fiéis.</p>
+          <p>Internamente, a Matriz Paroquial foi desenhada de modo a oferecer um espaço celebrativo organizado de modo que a assembleia reunida represente o Corpo Místico de Cristo e de modo a promover uma participação ativa dos fiéis na liturgia, em particular na celebração da Eucaristia, como membros de uma comunidade e não como meros espectadores.</p>
+          <p>Assim, a nave central é organizada de modo a seguir, não no retorno, a figura simbólica do corpo humano.</p>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li>A sede da presidência representa a cabeça do Corpo.</li>
+            <li>O ambão, de onde se proclama a Palavra de Deus, representa o coração.</li>
+            <li>A mesa eucarística situa-se no estômago, bem ao centro, destacando a reflexão pascal.</li>
+            <li>A pia batismal em um segundo, na parte "nas tripas".</li>
+            <li>O altar, a assembleia, como membros do corpo, dispõe-se ao redor das demais elementos, em anfiteatro, facilitando a visibilidade de todo e de cada seja visível.</li>
+          </ul>
+          <p>Acima da assembleia, estão representados os modelos da nossa salvação, na chamada coroa histórica. Acima dos santos, janelas, que nos dão seja visível ver o céu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Added Padroeira Section -->
+  <section id="padroeira" class="py-20 px-6 md:px-12 bg-[#f5ebe0]">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-light mb-4">Padroeira</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- História -->
+        <div class="bg-white rounded-lg p-8">
+          <h3 class="text-2xl font-semibold mb-6">História</h3>
+          <div class="text-gray-700 leading-relaxed text-sm">
+            <p>Suzana era prima de Gaio Aurélio Diocleciano, que se tornou imperador em 284. Suzana, tal como o imperador, era natural da Dalmácia e, segundo a tradição, tinha três tios sendo eles Caio, Máximo e Cláudio. Caio e Gabínio eram padres cristãos e Suzana também seguia a religião cristã numa época em que o Cristianismo não era ainda legalmente reconhecido pelo estado romano. Em dezembro de 283, Caio foi eleito bispo de Roma, e serviu-a como Papa até à data da sua morte, em abril de 296.</p>
+            <p>No Império Romano, cada imperador deveria indicar um governador menor, também conhecido como "César", que o iria suceder em dias mais tarde. Diocleciano anunciou o nomeado Galério e na primavera de 290. Diocleciano anunciou o nomeado Galério e sua prima Suzana uma vez que pretendia que o seu jovem sucessor se casasse com ela. Suzana, que tinha feito o voto de virgindade, recusou a proposta de casamento, decidiu que teve a aceitação do seu pai e do seu tio Caio, então Papa. Os tios não cristãos de Suzana não concordaram com a recusa e das razões, ficou furioso e ordenou a sua execução.</p>
+            <p>O jovem general Maximiano, com o intuito de a persuadir a casar, no entanto a insistente recusa de Suzana levantou a suspeita de que ela e outros membros da sua família fossem cristãos. Suzana recusou confirmando que era cristã e que o seu compromisso com Cristo era mais importante do que o casamento com o César. Quando Maximiano voltou conhecimento da recusa e das razões, ficou furioso e ordenou a sua execução, com um acto de adoração a deus Júpiter. Suzana recusou confirmando que era cristã e que o seu compromisso com Cristo era mais importante do que o casamento com o César. Quando Maximiano voltou conhecimento da recusa e das razões, ficou furioso e ordenou a sua execução.</p>
+            <p>Suzana foi decapitada[6] em sua casa e o seu pai Gabínio foi preso e passou fome até morrer na prisão. A restante família foi martirizada. O Papa Caio, que conseguiu esconder-se nas catacumbas.</p>
+            <p>Em 330 foi construída uma basílica sobre a casa de Suzana, hoje incialmente denominada de Basílica de São Caio em honra do Papa Caio que tinha residido tendo os corpos de Suzana e seu pai sido transladados das catacumbas para o interior da igreja. No ano 590, o Papa São Gregório, em reconhecimento ao culto devocional que havia crescido ao redor do túmulo de Santa Suzana, renomeou a basílica como Basílica de Santa Susana.</p>
+            <p>O dia da festa de Santa Suzana é 11 de agosto.</p>
+          </div>
+
+          <div class="mt-8">
+            <h4 class="text-xl font-semibold mb-4">Santa Suzana Pelo Mundo</h4>
+            <p class="text-sm text-gray-700 mb-4">Conheça outras igrejas de Santa Suzana pelo mundo</p>
+          </div>
+        </div>
+
+        <!-- Oração e Ladainha -->
+        <div>
+          <div class="bg-white rounded-lg p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-6">Oração</h3>
+            <div class="text-gray-700 leading-relaxed text-sm space-y-3">
+              <p>Ó Deus, que vos alegrais com aqueles que vos servem de coração simples e puro.</p>
+              <p>Pela intercessão de Santa Suzana, Virgem e Mártir, fazei que nós vos sirvamos livres do fermento do mal que nos circunda, pratiquemos o Evangelho com palavras e ações.</p>
+              <p>Por nosso Senhor Jesus Cristo, vosso Filho, que é Deus e convosco vive e reina na unidade do Espírito Santo, por todos os séculos dos séculos.</p>
+              <p class="font-semibold">Amém!</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-8">
+            <h3 class="text-2xl font-semibold mb-6">Ladainha em Honra de Santa Suzana</h3>
+            <div class="text-gray-700 leading-relaxed text-sm space-y-2">
+              <p>Senhor, tende piedade de nós.</p>
+              <p>Jesus Cristo, tende piedade de nós.</p>
+              <p>Senhor, tende piedade de nós.</p>
+              <p>Jesus Cristo, ouvi-nos.</p>
+              <p>Jesus Cristo, atendei-nos.</p>
+              <p class="mt-4">Pai celeste, que sois Deus, tende piedade de nós.</p>
+              <p>Jesus, Redentor do mundo, que sois Deus, tende piedade de nós.</p>
+              <p>Espírito Santo, que sois Deus, tende piedade de nós.</p>
+              <p>Santíssima Trindade, que sois um só Deus, tende piedade de nós.</p>
+              <p class="mt-4">Santa Maria, Rainha das virgens, rogai por nós.</p>
+              <p>Santa Suzana, rogai por nós.</p>
+              <p>Santa Suzana, modelo da pureza, rogai por nós.</p>
+              <p>Santa Suzana, perseguida e flagelada, rogai por nós.</p>
+              <p>Santa Suzana, decapitada por uma espada, rogai por nós.</p>
+              <p>Santa Suzana, consolada pelo amor de Deus, rogai por nós.</p>
+              <p>Santa Suzana, amparada pelos anjos para continuar como virgem, rogai por nós.</p>
+              <p>Santa Suzana, que preferistes a morte aos esplendores do trono, rogai por nós.</p>
+              <p>Santa Suzana, que recusastes um casamento com um imperador, rogai por nós.</p>
+              <p>Santa Suzana, que recusastes um casamento com um imperador, rogai por nós.</p>
+              <p>Santa Suzana, que derramastes vosso sangue na tribuna dos mártires, rogai por nós.</p>
+              <p>Santa Suzana, que recusastes publicamente adorar o deus romano, rogai por nós.</p>
+              <p>Santa Suzana, que derramastes vosso sangue na tribuna dos mártires, rogai por nós.</p>
+              <p>Santa Suzana, cheia de abundantes graças desde o berço, rogai por nós.</p>
+              <p>Santa Suzana, fiel criança de Jesus, rogai por nós.</p>
+              <p>Santa Suzana, modelo da juventude, rogai por nós.</p>
+              <p>Santa Suzana, templo da mais íntima humildade, rogai por nós.</p>
+              <p>Santa Suzana, ilustre emissária enviada por Deus, rogai por nós.</p>
+              <p>Santa Suzana, vítima da castidade por amor a Jesus, rogai por nós.</p>
+              <p>Santa Suzana, exemplo de força e coragem, rogai por nós.</p>
+              <p>Santa Suzana, espelho das mais heróicas virtudes, rogai por nós.</p>
+              <p>Santa Suzana, Alma inflamada no amor divino, rogai por nós.</p>
+              <p>Santa Suzana, valioso auxílio em todas as necessidades, rogai por nós.</p>
+              <p class="mt-4">Cordeiro de Deus, que tirais os pecados do mundo, perdoai-nos Senhor</p>
+              <p>Cordeiro de Deus, que tirais os pecados do mundo, ouvi-nos Senhor</p>
+              <p>Cordeiro de Deus, que tirais os pecados do mundo, tende piedade de nós.</p>
+              <p class="mt-4">V. Rogai por nós, Santa Suzana,</p>
+              <p>R. Para que sejamos dignos das promessas de Cristo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Added Pastorais Section -->
+  <section id="pastorais" class="py-20 px-6 md:px-12 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-light mb-4">Pastorais</h2>
+        <p class="text-gray-700">Conheça as pastorais da nossa paróquia</p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Pastoral Familiar -->
+        <div id="pastoral-familiar" class="bg-[#f5ebe0] rounded-lg p-8">
+          <h3 class="text-2xl font-semibold mb-4 text-[#dc143c]">Pastoral Familiar</h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-semibold mb-3">Funções</h4>
+              <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                <li>Ajudar casais de família, especialmente casais para, a viver e sua vocação e sua missão na Igreja e na sociedade</li>
+                <li>Educar e acompanhar os adolescentes, educando, crianças e os filhos no Magistério</li>
+                <li>Preparar os noivos para o sacramento do Matrimônio</li>
+                <li>Dar aos casais uma visão de família cristã</li>
+                <li>Dar aos casais uma visão de família cristã</li>
+                <li>Acompanhamento e aconselhamento de casais oficiais</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-3">Animadores</h4>
+              <p class="text-sm text-gray-700">Padre Lúcio</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pastoral do Batismo -->
+        <div id="pastoral-batismo" class="bg-[#f5ebe0] rounded-lg p-8">
+          <h3 class="text-2xl font-semibold mb-4 text-[#dc143c]">Pastoral do Batismo</h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-semibold mb-3">Funções</h4>
+              <p class="text-sm text-gray-700 mb-3">Como Pastoral eminentemente evangelizadora, tem como função principal: abrir as portas da Igreja para todos os que batem à sua porta, acolhendo-os com amor e carinho.</p>
+              <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                <li>Preparar os pais e padrinhos para o Batismo</li>
+                <li>Ajudar os pais e padrinhos a compreender o significado do Batismo</li>
+                <li>Celebrar o Sacramento do Batismo</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-3">Animadores</h4>
+              <p class="text-sm text-gray-700">Miguel</p>
+              <p class="text-sm text-gray-700">Email: <a href="mailto:miguel@santasuzana.org.br" class="text-[#dc143c] hover:underline">miguel@santasuzana.org.br</a></p>
+              <p class="text-sm text-gray-700 mt-3">Fabiana</p>
+              <p class="text-sm text-gray-700">Email: <a href="mailto:fabiana@santasuzana.org.br" class="text-[#dc143c] hover:underline">fabiana@santasuzana.org.br</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pastoral Catequética -->
+        <div id="pastoral-catequese" class="bg-[#f5ebe0] rounded-lg p-8">
+          <h3 class="text-2xl font-semibold mb-4 text-[#dc143c]">Pastoral Catequética</h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-semibold mb-3">Finalidade</h4>
+              <p class="text-sm text-gray-700 mb-3">A Catequese é o processo de transmissão, formação, testemunho, catálogo e vivência da fé, a partir e Palavra de Deus e da Tradição da Igreja (conforme CIC e o IC 1068).</p>
+              <h4 class="font-semibold mb-3 mt-4">Tarefas</h4>
+              <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                <li>Fazer com que os pais assumam a primeira catequese (conforme CIC e IC 1068)</li>
+                <li>Preparar a criança e o adolescente para os sacramentos da Eucaristia e da Crisma</li>
+                <li>Catequese de adultos</li>
+                <li>Catequese de adultos</li>
+                <li>A catequese de crianças</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-3">Funções</h4>
+              <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                <li>Promover o conhecimento da fé</li>
+                <li>Educação litúrgica</li>
+                <li>Formação moral</li>
+                <li>Ensinar a orar</li>
+                <li>Educação para a vida comunitária</li>
+                <li>Iniciação à missão</li>
+              </ul>
+              <h4 class="font-semibold mb-3 mt-4">Animadores</h4>
+              <p class="text-sm text-gray-700">Valdete</p>
+              <p class="text-sm text-gray-700">Email: <a href="mailto:catequese@santasuzana.org.br" class="text-[#dc143c] hover:underline">catequese@santasuzana.org.br</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- More Pastorais (abbreviated for space) -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-[#f5ebe0] rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Pastoral dos Jovens</h3>
+            <p class="text-sm text-gray-700 mb-3">Promover a evangelização, amar e educar dos jovens da Paróquia através de:</p>
+            <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+              <li>Grupo de Jovens</li>
+              <li>Crisma</li>
+              <li>Vocacional</li>
+            </ul>
+            <p class="text-sm text-gray-700 mt-3"><strong>Animador:</strong> Gustavo</p>
+          </div>
+
+          <div class="bg-[#f5ebe0] rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Catequese de Adultos</h3>
+            <p class="text-sm text-gray-700 mb-3">Promover encontros de formação cristã e litúrgica para catequistas e leigos.</p>
+            <p class="text-sm text-gray-700">Preparar os catequistas para o exercício do seu ministério de fé, Batismo e Crisma.</p>
+            <p class="text-sm text-gray-700 mt-3"><strong>Animador:</strong> Valdete</p>
+          </div>
+
+          <div class="bg-[#f5ebe0] rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Pastoral das Coroinhas</h3>
+            <p class="text-sm text-gray-700 mb-3">Funções:</p>
+            <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+              <li>Despertar vocações ao serviço, formando-os através e catequese</li>
+              <li>Participação nas missas, ajudando e servindo o celebrante</li>
+              <li>Acompanhar e motivar, junto com os pais</li>
+            </ul>
+            <p class="text-sm text-gray-700 mt-3"><strong>Animadora:</strong> Cris Rodrigues</p>
+          </div>
+
+          <div class="bg-[#f5ebe0] rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Pastoral da Comunicação</h3>
+            <p class="text-sm text-gray-700 mb-3">Promover os meios de comunicação, usando a internet para anunciar o Evangelho e a Palavra da Paróquia, através de:</p>
+            <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+              <li>Site da Paróquia</li>
+              <li>Redes Sociais</li>
+            </ul>
+            <p class="text-sm text-gray-700 mt-3"><strong>Animador:</strong> Letícia</p>
+          </div>
+
+          <div class="bg-[#f5ebe0] rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Pastoral da Liturgia/Ministros</h3>
+            <p class="text-sm text-gray-700 mb-3">A liturgia é ação e o centro da celebração e comunidade, através à celebração litúrgica e à celebração e à oração.</p>
+            <p class="text-sm text-gray-700"><strong>Animadores:</strong> Beto e Marcos (Dinha)</p>
+          </div>
+
+          <div class="bg-[#f5ebe0] rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Pastoral do Dízimo</h3>
+            <p class="text-sm text-gray-700 mb-3">A Pastoral do Dízimo tem como função principal amar e promover o conhecimento sobre participação ativa na comunidade.</p>
+            <p class="text-sm text-gray-700"><strong>Animadores:</strong> Cristina & Maria Teresa</p>
+          </div>
+
+          <div class="bg-[#f5ebe0] rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Pastoral da Saúde</h3>
+            <p class="text-sm text-gray-700 mb-3">Promover a saúde integral do ser humano através de:</p>
+            <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+              <li>Visitas aos enfermos</li>
+              <li>Promoção da saúde</li>
+              <li>Celebrações</li>
+            </ul>
+          </div>
+
+          <div class="bg-[#f5ebe0] rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Pastoral da Música</h3>
+            <p class="text-sm text-gray-700 mb-3">Funções:</p>
+            <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+              <li>Animar e louvar a Deus para a liturgia</li>
+              <li>Promover a formação litúrgico-musical</li>
+            </ul>
+            <p class="text-sm text-gray-700 mt-3"><strong>Animadora:</strong> Telma Pereira</p>
+          </div>
+
+          <div class="bg-[#f5ebe0] rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Pastoral de Evangelização</h3>
+            <p class="text-sm text-gray-700 mb-3">É de "Iniciação de formação cristã, onde cada a sociedade e para os que estão de longe". (Papa João Paulo II - Catechesi Tradendae, 18 e 19; CIC 1229 e 1230)</p>
+            <p class="text-sm text-gray-700"><strong>Responsável:</strong> Roberto Andrade e Mônica</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Added Movimentos/Organismos Section -->
+  <section id="movimentos" class="py-20 px-6 md:px-12 bg-[#f5ebe0]">
+    <div class="max-w-7xl mx-auto">
+      <!-- Movimentos -->
+      <div class="mb-16">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-light mb-4">Movimentos</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Apostolado da Oração</h3>
+            <p class="text-sm text-gray-700 mb-2">Missas todas as primeiras sextas feiras do mês às 8h na Imaculada e às 20h na Santa Suzana seguidas de Adoração ao Santíssimo.</p>
+            <p class="text-sm text-gray-700 mt-3"><strong>Animadora:</strong> Ana Cristina</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:anacristinanam@hotmail.com" class="text-[#dc143c] hover:underline">anacristinanam@hotmail.com</a></p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Filhas do Imaculado Coração de Maria</h3>
+            <p class="text-sm text-gray-700 mb-2">Missas todos os primeiros sábados do mês às 8h na Imaculada</p>
+            <p class="text-sm text-gray-700 mt-3">Maria de Fátima (Dinha)</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:dinhaprosper@terra.com.br" class="text-[#dc143c] hover:underline">dinhaprosper@terra.com.br</a></p>
+            <p class="text-sm text-gray-700 mt-2">Maria do Rosário (Zaia)</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:zaiagal@terra.com.br" class="text-[#dc143c] hover:underline">zaiagal@terra.com.br</a></p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Grupo de Oração Maria Mãe</h3>
+            <p class="text-sm text-gray-700 mb-2">Reuniões todas as quartas feiras às 14h30 no salão da Imaculada</p>
+            <p class="text-sm text-gray-700 mt-3">Rosa Lucia Angelini</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:rosa_angelini@hotmail.com" class="text-[#dc143c] hover:underline">rosa_angelini@hotmail.com</a></p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Cenáculo do Imaculado Coração de Maria</h3>
+            <p class="text-sm text-gray-700 mb-2">Maria Teresa Tacoli</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:teresatacoli@gmail.com" class="text-[#dc143c] hover:underline">teresatacoli@gmail.com</a></p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Grupo de Oração</h3>
+            <p class="text-sm text-gray-700 mb-2">Quarta-feira à tarde</p>
+            <p class="text-sm text-gray-700 mt-3">Rosa Lucia Angelini</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:rosa_angelini@hotmail.com" class="text-[#dc143c] hover:underline">rosa_angelini@hotmail.com</a></p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-xl font-semibold mb-3 text-[#dc143c]">Grupo de Oração dos Jovens</h3>
+            <p class="text-sm text-gray-700 mb-2">Quinta-feira à noite</p>
+            <p class="text-sm text-gray-700 mt-3">Bruno Santoro</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Organismos -->
+      <div>
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-light mb-4">Organismos</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-lg font-semibold mb-3 text-[#dc143c]">Cáritas de Santa Suzana</h3>
+            <p class="text-sm text-gray-700 mb-2"><strong>Site Oficial</strong></p>
+            <p class="text-sm text-gray-700 mb-2">Presidente: Dom Emanuel Torres</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:frafer.emmanuel@gmail.com" class="text-[#dc143c] hover:underline">frafer.emmanuel@gmail.com</a></p>
+            <p class="text-sm text-gray-700 mt-2">Vice-Presidente: Alcione Bravo</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:alcionebravo@uol.com.br" class="text-[#dc143c] hover:underline">alcionebravo@uol.com.br</a></p>
+            <p class="text-sm text-gray-700 mt-2">Coordenadora: Ione Santoro</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:ione@galeto.com.br" class="text-[#dc143c] hover:underline">ione@galeto.com.br</a></p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-lg font-semibold mb-3 text-[#dc143c]">CPP - Conselho Paroquial de Pastoral</h3>
+            <p class="text-sm text-gray-700 mb-2">Rosa Lucia Angelini</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:rosa_angelini@hotmail.com" class="text-[#dc143c] hover:underline">rosa_angelini@hotmail.com</a></p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-lg font-semibold mb-3 text-[#dc143c]">CPAE - Conselho Paroquial para Assuntos Econômicos</h3>
+            <p class="text-sm text-gray-700 mb-2">Pe. Manoel C. Viana Neto</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:padremanoel@santasuzana.org.br" class="text-[#dc143c] hover:underline">padremanoel@santasuzana.org.br</a></p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-lg font-semibold mb-3 text-[#dc143c]">Empresa com Valores (ADCE)</h3>
+            <p class="text-sm text-gray-700 mb-2">Paulo Lisboa</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:paulomarcellisboa@gmail.com" class="text-[#dc143c] hover:underline">paulomarcellisboa@gmail.com</a></p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-lg font-semibold mb-3 text-[#dc143c]">SSR - Santa Suzana Runners</h3>
+            <p class="text-sm text-gray-700 mb-2">Através de atividades desportivas, culturais e de formação (palestras sobre saúde e bem-estar, conferências, mesa-redondas, etc.), buscar não somente ter uma vida espiritual saudável, mas também um corpo saudável!</p>
+            <p class="text-sm text-gray-700 mt-3">Matusalém e Tathiana</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:matusalem.silva@yahoo.com.br" class="text-[#dc143c] hover:underline">matusalem.silva@yahoo.com.br</a> e <a href="mailto:tathianabarbion@yahoo.com.br" class="text-[#dc143c] hover:underline">tathianabarbion@yahoo.com.br</a></p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-lg font-semibold mb-3 text-[#dc143c]">Comissão de Obras</h3>
+            <p class="text-sm text-gray-700 mb-2">Comissão composta do Pároco e dos membros da comunidade paroquial que acompanham as obras e colaboram para a captação de recursos.</p>
+            <p class="text-sm text-gray-700 mt-3">Sebastião Burm</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:sebastiao@burm.com.br" class="text-[#dc143c] hover:underline">sebastiao@burm.com.br</a></p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-lg font-semibold mb-3 text-[#dc143c]">Rede Communio</h3>
+            <p class="text-sm text-gray-700 mb-2">Rede formada por leigos católicos, coordenada por leigos católicos, voltada para o serviço às necessidades do próximo.</p>
+            <p class="text-sm text-gray-700 mt-3">Ivan, Taty e Cristian</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:ivan@redecommunio.com.br" class="text-[#dc143c] hover:underline">ivan@redecommunio.com.br</a></p>
+            <p class="text-sm text-gray-700">WhatsApp: (11) 99578-5878</p>
+            <p class="text-sm text-gray-700">Telefone: (11) 3743-3007</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-hover">
+            <h3 class="text-lg font-semibold mb-3 text-[#dc143c]">RTSS - Rede de Talentos Santa Suzana</h3>
+            <p class="text-sm text-gray-700 mb-2">Prestar assistência a desempregados e empreendedores de nossa comunidade, através de ferramentas de apoio (Linkedin, Facebook, etc.), bem como oferecer capacitação, de modo a ampliar as oportunidades para o mercado de trabalho e de negócios.</p>
+            <p class="text-sm text-gray-700 mt-3">Paulo Lisboa</p>
+            <p class="text-sm text-gray-700">Email: <a href="mailto:paulomarcellisboa@gmail.com" class="text-[#dc143c] hover:underline">paulomarcellisboa@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="sobre" class="py-20 px-6 md:px-12 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-light mb-6">Nossa História</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            A Paróquia Santa Suzana é um lugar sagrado onde a comunidade se reúne para celebrar a fé, 
+            compartilhar esperança e viver o amor de Cristo. Nossa missão é servir a comunidade através 
+            da oração, dos sacramentos e do serviço compassivo.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            Santa Suzana, nossa padroeira, é um exemplo de fé inabalável e coragem. Inspirados por seu 
+            testemunho, buscamos viver os valores do Evangelho em nossa vida diária.
+          </p>
+          <a href="#comunidade" class="text-[#8b4513] font-medium hover:underline">Conheça nossa comunidade →</a>
+        </div>
+        <div class="relative">
+          <img src="Imaculada-conceição.png" 
+               alt="Capela Imaculada Conceição" 
+               class="rounded-lg shadow-lg w-full h-auto cursor-pointer">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mass Schedule Section -->
+  <section id="horarios" class="py-20 px-6 md:px-12 bg-[#f5ebe0]">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-light mb-4">Horários de Missas</h2>
+        <p class="text-gray-700">Venha celebrar conosco</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Weekday Masses -->
+        <div class="bg-white p-8 rounded-lg shadow-md card-hover">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 bg-[#8b4513] rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Segunda a Sexta</h3>
+          </div>
+          <div class="space-y-3 text-center">
+            <p class="text-gray-700">7h00 - Missa Matinal</p>
+            <p class="text-gray-700">19h00 - Missa Vespertina</p>
+          </div>
+        </div>
+        
+        <!-- Saturday Masses -->
+        <div class="bg-white p-8 rounded-lg shadow-md card-hover">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 bg-[#8b4513] rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Sábado</h3>
+          </div>
+          <div class="space-y-3 text-center">
+            <p class="text-gray-700">18h00 - Missa Vespertina</p>
+            <p class="text-sm text-gray-500 mt-4">(Antecipa o Domingo)</p>
+          </div>
+        </div>
+        
+        <!-- Sunday Masses -->
+        <div class="bg-white p-8 rounded-lg shadow-md card-hover">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 bg-[#8b4513] rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Domingo</h3>
+          </div>
+          <div class="space-y-3 text-center">
+            <p class="text-gray-700">8h00 - Missa Matinal</p>
+            <p class="text-gray-700">10h00 - Missa Solene</p>
+            <p class="text-gray-700">19h00 - Missa Vespertina</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="eventos" class="py-20 px-6 md:px-12 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-light mb-4">Próximos Eventos</h2>
+        <p class="text-gray-700">Participe das atividades da nossa comunidade</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-[#f5ebe0] p-8 rounded-lg card-hover">
+          <div class="flex items-start gap-4">
+            <div class="bg-[#8b4513] text-white p-4 rounded-lg text-center min-w-[80px]">
+              <div class="text-2xl font-bold">15</div>
+              <div class="text-sm">MAR</div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Catequese para Adultos</h3>
+              <p class="text-gray-700 mb-2">Encontro semanal de formação e reflexão sobre a fé católica.</p>
+              <p class="text-sm text-gray-600">Quartas-feiras às 20h00</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-[#f5ebe0] p-8 rounded-lg card-hover">
+          <div class="flex items-start gap-4">
+            <div class="bg-[#8b4513] text-white p-4 rounded-lg text-center min-w-[80px]">
+              <div class="text-2xl font-bold">22</div>
+              <div class="text-sm">MAR</div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Grupo de Jovens</h3>
+              <p class="text-gray-700 mb-2">Encontro de jovens para oração, partilha e atividades comunitárias.</p>
+              <p class="text-sm text-gray-600">Sábados às 16h00</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-[#f5ebe0] p-8 rounded-lg card-hover">
+          <div class="flex items-start gap-4">
+            <div class="bg-[#8b4513] text-white p-4 rounded-lg text-center min-w-[80px]">
+              <div class="text-2xl font-bold">29</div>
+              <div class="text-sm">MAR</div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Adoração ao Santíssimo</h3>
+              <p class="text-gray-700 mb-2">Momento de oração e contemplação diante do Santíssimo Sacramento.</p>
+              <p class="text-sm text-gray-600">Sextas-feiras às 19h30</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-[#f5ebe0] p-8 rounded-lg card-hover">
+          <div class="flex items-start gap-4">
+            <div class="bg-[#8b4513] text-white p-4 rounded-lg text-center min-w-[80px]">
+              <div class="text-2xl font-bold">05</div>
+              <div class="text-sm">ABR</div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Ação Social</h3>
+              <p class="text-gray-700 mb-2">Distribuição de alimentos e roupas para famílias necessitadas.</p>
+              <p class="text-sm text-gray-600">Primeiro domingo do mês às 14h00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Added Hub Section -->
+  <section id="hub" class="py-20 px-6 md:px-12 bg-gradient-to-br from-[#dc143c] to-[#b01030]">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-light mb-4 text-white">Hub Paroquial</h2>
+        <p class="text-white text-lg">Conecte-se com a comunidade de forma digital</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="text-white">
+          <h3 class="text-3xl font-semibold mb-6">Faça parte do nosso Hub Digital</h3>
+          <p class="text-lg mb-6 leading-relaxed">
+            O Hub Paroquial é o seu espaço digital para se conectar com a comunidade, 
+            acessar conteúdos exclusivos, gerenciar suas contribuições e participar 
+            ativamente da vida paroquial.
+          </p>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">Inscrições em Eventos</h4>
+                <p class="text-white/90 text-sm">Inscreva-se facilmente em retiros, encontros e atividades paroquiais</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">Conteúdo Exclusivo</h4>
+                <p class="text-white/90 text-sm">Acesse reflexões, catequeses e materiais de formação</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">Comunidade Conectada</h4>
+                <p class="text-white/90 text-sm">Interaja com outros paroquianos e participe de grupos</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">Gestão de Contribuições</h4>
+                <p class="text-white/90 text-sm">Acompanhe seu dízimo e contribuições para a nova matriz</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl">
+          <h3 class="text-2xl font-semibold mb-6 text-center">Acesse o Hub</h3>
+          
+          <div class="space-y-4">
+            <a href="login.html" class="block w-full bg-[#dc143c] text-white text-center py-4 px-6 rounded-lg font-semibold hover:bg-[#b01030] transition-all transform hover:scale-105 shadow-lg">
+              Entrar
+            </a>
+            
+            <div class="relative">
+              <div class="absolute inset-0 flex items-center">
+                <div class="w-full border-t border-gray-300"></div>
+              </div>
+              <div class="relative flex justify-center text-sm">
+                <span class="px-4 bg-white text-gray-500">ou</span>
+              </div>
+            </div>
+            
+            <a href="cadastro.html" class="block w-full bg-white text-[#dc143c] text-center py-4 px-6 rounded-lg font-semibold border-2 border-[#dc143c] hover:bg-[#f5ebe0] transition-all transform hover:scale-105">
+              Criar Conta
+            </a>
+          </div>
+          
+          <p class="text-center text-sm text-gray-600 mt-6">
+            Ainda não tem uma conta? Cadastre-se gratuitamente e faça parte da nossa comunidade digital!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contato" class="py-20 px-6 md:px-12 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-light mb-4">Entre em Contato</h2>
+        <p class="text-gray-700">Estamos aqui para servir você</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div>
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium mb-2">Nome Completo</label>
+              <input type="text" id="name" name="name" 
+                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#dc143c]"
+                     placeholder="Seu nome">
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm font-medium mb-2">E-mail</label>
+              <input type="email" id="email" name="email" 
+                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#dc143c]"
+                     placeholder="seu@email.com">
+            </div>
+            
+            <div>
+              <label for="phone" class="block text-sm font-medium mb-2">Telefone</label>
+              <input type="tel" id="phone" name="phone" 
+                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#dc143c]"
+                     placeholder="(00) 00000-0000">
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium mb-2">Mensagem</label>
+              <textarea id="message" name="message" rows="5"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#dc143c]"
+                        placeholder="Como podemos ajudá-lo?"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-primary w-full text-center">
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-2xl font-semibold mb-4">Informações de Contato</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-[#f5ebe0] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">Endereço</h4>
+                  <p class="text-gray-700">Rua David Ben Gurion, 777<br>Jardim Monte Kemel - São Paulo/SP<br>CEP 05653-070</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-[#f5ebe0] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">Telefone</h4>
+                  <p class="text-gray-700">(11) 3742-4754</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-[#f5ebe0] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">E-mail</h4>
+                  <p class="text-gray-700">contato@santasuzana.org.br</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-2xl font-semibold mb-4">Horário de Atendimento</h3>
+            <div class="bg-[#f5ebe0] p-6 rounded-lg">
+              <p class="text-gray-700 mb-2"><strong>Terça a Sábado:</strong> 8h30 às 12h00 e 14h00 às 17h00</p>
+              <p class="text-gray-700"><strong>Domingo e Segunda:</strong> Fechado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#2c2c2c] text-white py-12 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <img src="icone-menu.png" alt="Paróquia Santa Suzana" class="h-16 mb-4 brightness-0 invert">
+          <p class="text-gray-400 text-sm">Uma comunidade de fé, esperança e amor.</p>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4">Links Rápidos</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Início</a></li>
+            <li><a href="#paroquia" class="text-gray-400 hover:text-white transition-colors">Paróquia</a></li>
+            <li><a href="#nova-matriz" class="text-gray-400 hover:text-white transition-colors">Nova Matriz</a></li>
+            <li><a href="#comunidades" class="text-gray-400 hover:text-white transition-colors">Comunidades</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4">Pastorais</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#pastorais" class="text-gray-400 hover:text-white transition-colors">Todas as Pastorais</a></li>
+            <li><a href="#pastoral-familiar" class="text-gray-400 hover:text-white transition-colors">Pastoral Familiar</a></li>
+            <li><a href="#pastoral-batismo" class="text-gray-400 hover:text-white transition-colors">Pastoral do Batismo</a></li>
+            <li><a href="#pastoral-jovens" class="text-gray-400 hover:text-white transition-colors">Pastoral dos Jovens</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4">Movimentos</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#movimentos" class="text-gray-400 hover:text-white transition-colors">Movimentos</a></li>
+            <li><a href="#movimentos" class="text-gray-400 hover:text-white transition-colors">Organismos</a></li>
+            <li><a href="#padres" class="text-gray-400 hover:text-white transition-colors">Padres</a></li>
+            <li><a href="#contato" class="text-gray-400 hover:text-white transition-colors">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+        <!-- Updated footer copyright text -->
+        <p>&copy; 2025 Raphael Costa. Todos os direitos reservados. Criado para o site da Paróquia Santa Suzana</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Added lightbox modal for plants images -->
+  <div id="lightboxModal" class="lightbox-modal">
+    <div class="lightbox-modal-content">
+      <button class="lightbox-modal-close" id="closeBtn">&times;</button>
+      <img id="lightboxImage" class="lightbox-modal-image" src="/placeholder.svg" alt="">
+      <p id="lightboxTitle" class="lightbox-modal-title"></p>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      mobileMenuBtn.classList.toggle('active'); // Toggle hamburger animation
+    });
+    
+    // Close mobile menu when clicking on a link
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        mobileMenuBtn.classList.remove('active'); // Remove hamburger animation
+      });
+    });
+    
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offsetTop = target.offsetTop - 100;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Lightbox functionality for plants images
+    document.addEventListener('DOMContentLoaded', () => {
+      const lightboxModal = document.getElementById('lightboxModal');
+      const lightboxImage = document.getElementById('lightboxImage');
+      const lightboxTitle = document.getElementById('lightboxTitle');
+      const closeBtn = document.getElementById('closeBtn');
+
+      // Get all plant images in the Plantas section (nova-matriz)
+      const plantImages = document.querySelectorAll('#nova-matriz .text-center img');
+
+      // Add click event listener to each plant image
+      plantImages.forEach(img => {
+        img.addEventListener('click', function() {
+          lightboxImage.src = this.src;
+          lightboxTitle.textContent = this.alt;
+          lightboxModal.classList.add('active');
+          document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+      });
+
+      // Close lightbox when X button is clicked
+      closeBtn.addEventListener('click', function() {
+        lightboxModal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+      });
+
+      // Close lightbox when clicking outside the image
+      lightboxModal.addEventListener('click', function(e) {
+        if (e.target === lightboxModal) {
+          lightboxModal.classList.remove('active');
+          document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+      });
+
+      // Close lightbox with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
+          lightboxModal.classList.remove('active');
+          document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+      });
+    });
+  </script>
+</body>
+</html>

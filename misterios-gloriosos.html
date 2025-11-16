@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mistérios Gloriosos - Paróquia Santa Suzana</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf8f5;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <button onclick="goBack()" class="p-2 hover:bg-gray-100 rounded-lg">
+          <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+        </button>
+        <img src="icone-menu.png" alt="Paróquia Santa Suzana" class="h-12">
+        <div>
+          <h1 class="text-xl font-semibold">Mistérios Gloriosos</h1>
+          <p class="text-sm text-gray-600">Quarta-feira e Domingo</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <!-- Banner -->
+    <div class="bg-gradient-to-r from-white via-[#f5ebe0] to-white border-2 border-[#dc143c] rounded-2xl p-8 mb-8">
+      <div class="flex items-center gap-4 mb-3">
+        <div class="w-16 h-16 bg-[#dc143c] rounded-full flex items-center justify-center">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-3xl font-light text-[#dc143c]">Mistérios Gloriosos</h2>
+          <p class="text-gray-700">Meditações sobre a vitória de Cristo</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Significado -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+      <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+        <svg class="w-6 h-6 text-[#dc143c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+        </svg>
+        Significado Espiritual
+      </h3>
+      <div class="bg-[#f5ebe0] rounded-lg p-6 space-y-3">
+        <p class="text-gray-700">Os Mistérios Gloriosos nos convidam a contemplar a vitória de Cristo sobre a morte e o pecado. São meditações sobre a Ressurreição, Ascensão, a vinda do Espírito Santo e a glória de Maria no céu. Estes mistérios nos enchem de esperança e alegria.</p>
+        <p class="text-gray-700">Ao rezar estes mistérios, celebramos o triunfo do amor sobre o ódio, da vida sobre a morte, da luz sobre as trevas. Somos chamados a viver como ressuscitados, cheios do Espírito Santo, caminhando rumo à glória eterna que nos aguarda no céu.</p>
+        <p class="text-gray-700"><strong>Virtudes a meditar:</strong> Fé na Ressurreição, Esperança, Amor ao Espírito Santo, Devoção a Maria e Desejo do Céu.</p>
+      </div>
+    </div>
+
+    <!-- Como Rezar -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+      <h3 class="text-2xl font-semibold mb-4">Como Rezar Cada Mistério</h3>
+      <div class="bg-[#f5ebe0] rounded-lg p-6 space-y-2 text-sm">
+        <p><strong>1.</strong> Anuncie o mistério e faça uma breve meditação</p>
+        <p><strong>2.</strong> Reze um Pai Nosso</p>
+        <p><strong>3.</strong> Reze dez Ave Marias meditando no mistério</p>
+        <p><strong>4.</strong> Reze um Glória ao Pai</p>
+        <p><strong>5.</strong> Opcionalmente, reze a Oração de Fátima: "Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno, levai as almas todas para o céu, principalmente as que mais precisarem."</p>
+      </div>
+    </div>
+
+    <!-- Os 5 Mistérios -->
+    <div class="space-y-6">
+      <!-- 1º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#dc143c] rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">1</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Ressurreição de Jesus</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Ele não está aqui; ressuscitou!" (Lc 24,6)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> No terceiro dia após sua morte, Jesus ressuscita glorioso do sepulcro. As mulheres que vão ao túmulo encontram a pedra removida e um anjo que anuncia: "Ele não está aqui; ressuscitou!" Jesus aparece a Maria Madalena, aos discípulos e a muitos outros, mostrando que venceu a morte.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> A Ressurreição é o fundamento da nossa fé. Cristo venceu a morte e nos abriu as portas do céu. Sua vitória é também a nossa vitória. Somos chamados a viver como ressuscitados, deixando para trás o pecado e vivendo em novidade de vida.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Fé viva e esperança na vida eterna</p>
+        </div>
+      </div>
+
+      <!-- 2º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#dc143c] rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">2</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Ascensão de Jesus ao Céu</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Ide por todo o mundo e pregai o Evangelho." (Mc 16,15)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Quarenta dias após a Ressurreição, Jesus reúne seus discípulos no Monte das Oliveiras. Após dar-lhes a missão de evangelizar todas as nações, Ele é elevado ao céu diante de seus olhos. Uma nuvem O encobre e dois anjos anunciam que Ele voltará da mesma forma.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> Jesus retorna ao Pai, mas não nos abandona. Ele nos envia em missão e promete estar conosco todos os dias. A Ascensão nos lembra que nossa verdadeira pátria é o céu e que devemos viver com o coração voltado para as coisas do alto, não para as da terra.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Desejo do céu e zelo apostólico</p>
+        </div>
+      </div>
+
+      <!-- 3º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#dc143c] rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">3</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Vinda do Espírito Santo sobre os Apóstolos</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Todos ficaram repletos do Espírito Santo." (At 2,4)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> No dia de Pentecostes, os apóstolos estão reunidos com Maria no Cenáculo quando um vento forte enche a casa e línguas de fogo pousam sobre cada um deles. Todos ficam repletos do Espírito Santo e começam a falar em diversas línguas. Pedro prega corajosamente e três mil pessoas se convertem.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> O Espírito Santo é o dom prometido por Jesus, que nos fortalece, ilumina e santifica. Ele transforma os apóstolos medrosos em corajosos evangelizadores. Devemos invocar constantemente o Espírito Santo para que Ele nos guie, nos console e nos dê os dons necessários para viver como verdadeiros cristãos.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Docilidade ao Espírito Santo e coragem apostólica</p>
+        </div>
+      </div>
+
+      <!-- 4º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#dc143c] rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">4</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Assunção de Maria ao Céu</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Grandes coisas fez em mim o Todo-Poderoso." (Lc 1,49)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Ao término de sua vida terrena, Maria é elevada ao céu em corpo e alma. Ela, que foi preservada do pecado original e viveu uma vida de perfeita santidade, não conheceu a corrupção do túmulo. Os anjos a conduzem triunfalmente à presença de seu Filho.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> A Assunção de Maria é um sinal de esperança para todos nós. Ela nos mostra o destino glorioso que nos aguarda se formos fiéis a Deus. Maria já está no céu intercedendo por nós, seus filhos. Devemos imitá-la em sua fidelidade, pureza e amor a Deus.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Devoção a Maria e pureza de coração</p>
+        </div>
+      </div>
+
+      <!-- 5º Mistério -->
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#dc143c] rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">5</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">A Coroação de Maria como Rainha do Céu e da Terra</h4>
+            <p class="text-sm text-gray-600 italic mb-3">"Uma grande sinal apareceu no céu: uma mulher vestida de sol, com a lua debaixo dos pés e uma coroa de doze estrelas na cabeça." (Ap 12,1)</p>
+          </div>
+        </div>
+        <div class="bg-[#f5ebe0] rounded-lg p-5 space-y-3">
+          <p class="text-gray-700"><strong>Meditação:</strong> Maria é coroada por seu Filho como Rainha do Céu e da Terra. Ela, que foi a serva humilde do Senhor, é exaltada acima de todos os anjos e santos. Como Rainha e Mãe, ela intercede por todos os seus filhos e distribui as graças que recebe de Deus.</p>
+          <p class="text-gray-700"><strong>Reflexão:</strong> Maria é nossa Mãe e Rainha. Ela não exerce um poder de domínio, mas de amor maternal. Devemos recorrer a ela com confiança filial, sabendo que ela sempre nos conduz a Jesus. A glória de Maria nos lembra que Deus exalta os humildes e que a verdadeira grandeza está no serviço e no amor.</p>
+          <p class="text-gray-700"><strong>Virtude:</strong> Confiança em Maria e humildade</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orações -->
+    <div class="bg-white rounded-xl shadow-md p-6 mt-8">
+      <h3 class="text-2xl font-semibold mb-4">Orações do Rosário</h3>
+      <div class="space-y-4">
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Pai Nosso</p>
+          <p class="text-sm text-gray-700">Pai nosso, que estais nos céus, santificado seja o vosso nome, venha a nós o vosso reino, seja feita a vossa vontade assim na terra como no céu. O pão nosso de cada dia nos dai hoje, perdoai-nos as nossas ofensas assim como nós perdoamos a quem nos tem ofendido, e não nos deixeis cair em tentação, mas livrai-nos do mal. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Ave Maria</p>
+          <p class="text-sm text-gray-700">Ave Maria, cheia de graça, o Senhor é convosco, bendita sois vós entre as mulheres e bendito é o fruto do vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós pecadores, agora e na hora da nossa morte. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Glória ao Pai</p>
+          <p class="text-sm text-gray-700">Glória ao Pai, ao Filho e ao Espírito Santo. Como era no princípio, agora e sempre. Amém.</p>
+        </div>
+
+        <div class="bg-[#f5ebe0] rounded-lg p-4">
+          <p class="font-semibold mb-2">Oração de Fátima (opcional após cada mistério)</p>
+          <p class="text-sm text-gray-700">Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno, levai as almas todas para o céu, principalmente as que mais precisarem.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-6 text-center">
+      <p class="text-sm text-gray-600">
+        © 2025 Raphael Costa. Todos os direitos reservados. Criado para o site da Paróquia Santa Suzana
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>
