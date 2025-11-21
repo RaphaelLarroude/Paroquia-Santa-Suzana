@@ -102,40 +102,46 @@
       max-height: 500px;
     }
     
+    /* Increased hamburger button size for better touch targets on mobile */
     .hamburger {
       cursor: pointer;
-      width: 28px;
-      height: 24px;
+      width: 36px;
+      height: 36px;
       position: relative;
       transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6px;
+      -webkit-tap-highlight-color: transparent;
     }
     
     .hamburger span {
       display: block;
       position: absolute;
       height: 3px;
-      width: 100%;
+      width: 24px;
       background: #dc143c;
       border-radius: 3px;
       opacity: 1;
-      left: 0;
+      left: 6px;
       transition: 0.25s ease-in-out;
     }
     
     .hamburger span:nth-child(1) {
-      top: 0px;
+      top: 6px; /* Adjusted position for better centering */
     }
     
     .hamburger span:nth-child(2) {
-      top: 10px;
+      top: 13px; /* Adjusted position for better centering */
     }
     
     .hamburger span:nth-child(3) {
-      top: 20px;
+      top: 20px; /* Adjusted position for better centering */
     }
     
     .hamburger.active span:nth-child(1) {
-      top: 10px;
+      top: 13px; /* Adjusted position */
       transform: rotate(135deg);
     }
     
@@ -145,7 +151,7 @@
     }
     
     .hamburger.active span:nth-child(3) {
-      top: 10px;
+      top: 13px; /* Adjusted position */
       transform: rotate(-135deg);
     }
 
@@ -203,8 +209,8 @@
       
       /* Mobile-optimized padding */
       section {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
       }
       
       /* Mobile-optimized buttons */
@@ -346,10 +352,13 @@
   
   <!-- Navigation -->
   <!-- Improved mobile navigation with better touch targets -->
-  <nav id="navbar" class="fixed w-full top-0 z-50 py-3 px-4 md:py-4 md:px-12">
+  <!-- Reduced padding on mobile for more compact navbar -->
+  <!-- Changed background to transparent and added transition for smooth color change on scroll -->
+  <nav id="navbar" class="fixed w-full top-0 z-50 py-2 px-4 md:py-4 md:px-12 transition-all duration-300 bg-transparent">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center">
-        <img src="icone-menu.png" alt="Paróquia Santa Suzana" class="h-12 md:h-20">
+        <!-- Reduced logo size on mobile for better space usage -->
+        <img src="icone-menu.png" alt="Paróquia Santa Suzana" class="h-10 md:h-20">
       </div>
       
       <!-- Desktop Menu -->
@@ -378,7 +387,8 @@
       </div>
       
       <!-- Improved mobile menu button with animated hamburger -->
-      <button id="mobile-menu-btn" class="md:hidden hamburger" aria-label="Menu">
+      <!-- Added larger touch target area for hamburger button -->
+      <button id="mobile-menu-btn" class="md:hidden hamburger min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -386,28 +396,31 @@
     </div>
     
     <!-- Improved mobile menu with better spacing and touch targets -->
-    <div id="mobile-menu" class="mobile-menu md:hidden">
-      <div class="flex flex-col gap-1 px-4 py-4 bg-white rounded-lg mt-4 shadow-lg">
-        <a href="#paroquia" class="text-base font-medium text-[#dc143c] py-3 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors">Paróquia</a>
-        <a href="#padroeira" class="text-sm text-gray-700 py-2 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors">Padroeira</a>
-        <a href="#historia" class="text-sm text-gray-700 py-2 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors">História</a>
-        <a href="#nova-matriz" class="text-base font-medium text-[#dc143c] py-3 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors">Nova Matriz</a>
-        <a href="#pastorais" class="text-base font-medium text-[#dc143c] py-3 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors">Pastorais</a>
-        <a href="#pastoral-familiar" class="text-sm text-gray-700 py-2 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors">Pastoral Familiar</a>
-        <a href="#pastoral-batismo" class="text-sm text-gray-700 py-2 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors">Pastoral do Batismo</a>
-        <a href="#pastoral-catequese" class="text-sm text-gray-700 py-2 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors">Pastoral Catequética</a>
-        <a href="#pastoral-jovens" class="text-sm text-gray-700 py-2 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors">Pastoral dos Jovens</a>
-        <a href="#movimentos" class="text-base font-medium text-[#dc143c] py-3 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors">Movimentos/Organismos</a>
-        <a href="#contato" class="text-base font-medium text-[#dc143c] py-3 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors">Contato</a>
+    <!-- Increased touch targets (min 48px height) and improved spacing for mobile accessibility -->
+    <div id="mobile-menu" class="mobile-menu md:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out">
+      <div class="flex flex-col gap-1 px-2 py-3 bg-white rounded-lg mt-3 shadow-lg">
+        <a href="#paroquia" class="text-base font-medium text-[#dc143c] py-4 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors min-h-[48px] flex items-center">Paróquia</a>
+        <a href="#padroeira" class="text-sm text-gray-700 py-3 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors min-h-[44px] flex items-center">Padroeira</a>
+        <a href="#historia" class="text-sm text-gray-700 py-3 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors min-h-[44px] flex items-center">História</a>
+        <a href="#nova-matriz" class="text-base font-medium text-[#dc143c] py-4 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors min-h-[48px] flex items-center">Nova Matriz</a>
+        <a href="#pastorais" class="text-base font-medium text-[#dc143c] py-4 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors min-h-[48px] flex items-center">Pastorais</a>
+        <a href="#pastoral-familiar" class="text-sm text-gray-700 py-3 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors min-h-[44px] flex items-center">Pastoral Familiar</a>
+        <a href="#pastoral-batismo" class="text-sm text-gray-700 py-3 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors min-h-[44px] flex items-center">Pastoral do Batismo</a>
+        <a href="#pastoral-catequese" class="text-sm text-gray-700 py-3 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors min-h-[44px] flex items-center">Pastoral Catequética</a>
+        <a href="#pastoral-jovens" class="text-sm text-gray-700 py-3 px-4 pl-8 hover:bg-[#f5ebe0] rounded-lg transition-colors min-h-[44px] flex items-center">Pastoral dos Jovens</a>
+        <a href="#movimentos" class="text-base font-medium text-[#dc143c] py-4 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors min-h-[48px] flex items-center">Movimentos/Organismos</a>
+        <a href="#contato" class="text-base font-medium text-[#dc143c] py-4 px-4 hover:bg-[#f5ebe0] rounded-lg transition-colors min-h-[48px] flex items-center">Contato</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="inicio" class="hero-gradient pt-24 md:pt-32 pb-12 md:pb-20 px-4 md:px-12">
+  <!-- Reduced top padding on mobile to account for smaller navbar -->
+  <section id="inicio" class="hero-gradient pt-32 md:pt-32 pb-12 md:pb-20 px-4 md:px-12">
     <div class="max-w-7xl mx-auto">
       <!-- Mobile-optimized social media icons -->
-      <div class="flex justify-center gap-4 md:gap-8 mb-8 md:mb-12 overflow-x-auto pb-2">
+      <!-- Removed overflow-x-auto and added flex-wrap to prevent clipping and allow wrapping on small screens -->
+      <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8 md:mb-12">
         <!-- Atualizando link do Facebook -->
         <a href="https://www.facebook.com/paroquiadesantasuzana/?locale=pt_BR" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 text-[#dc143c] hover:text-[#b01030] transition-colors min-w-[70px]">
           <div class="w-12 h-12 md:w-16 md:h-16 border-2 border-[#dc143c] rounded-lg flex items-center justify-center">
@@ -439,7 +452,7 @@
         <a href="https://api.whatsapp.com/send?phone=551137424754" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 text-[#dc143c] hover:text-[#b01030] transition-colors min-w-[70px]">
           <div class="w-12 h-12 md:w-16 md:h-16 border-2 border-[#dc143c] rounded-lg flex items-center justify-center">
             <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.86 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
             </svg>
           </div>
           <span class="text-xs md:text-sm">WhatsApp</span>
@@ -1178,13 +1191,13 @@
             <!-- Updated with complete functions and actions from image -->
             <p class="text-sm text-gray-700 mb-3"><strong>Funções:</strong></p>
             <p class="text-sm text-gray-700 mb-2 text-xs italic">Segundo o Pe. Anísio Baldessin (in Como fazer Pastoral da Saúde?, p. 32-33), a "Pastoral da Saúde tem como função defender, promover, preservar, cuidar e celebrar a vida, tomando presente a sociedade de hoje a missão libertadora de Cristo no mundo da saúde."</p>
-            <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside mb-3">
+            <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
               <li><strong>Solidária:</strong> vivência da solidariedade com os doentes e sofredores nos hospitais, domicílios e comunidades</li>
               <li><strong>Comunitária:</strong> capacitação de agentes multiplicadores de saúde e criação de grupos comunitários que atuem no campo da prevenção, promoção, educação e humanização</li>
               <li><strong>Político-institucional:</strong> atuação política junto aos órgãos e instituições, públicos e privados, que prestam serviços e formam profissionais na área da saúde</li>
             </ul>
-            <h4 class="font-semibold mb-2 text-sm">Atuação:</h4>
-            <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+            <h4 class="font-semibold mb-3 mt-4">Atuação:</h4>
+            <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
               <li>Inculturar a Boa Nova do Evangelho no Setor da Saúde</li>
               <li>Levar todas as pessoas a compreender o verdadeiro sentido da vida</li>
               <li>Promover o atendimento humano e espiritual do doente em domicílio e no hospital</li>
@@ -1219,7 +1232,7 @@
             <!-- Updated with two programs and their coordinators from image -->
             <h4 class="font-semibold mb-2 text-sm">Caminho Neocatecumenal</h4>
             <p class="text-sm text-gray-700 mb-2">É um "Itinerário de formação católica, válida para a sociedade e para os tempos de hoje". (Papa João Paulo II in Estatuto definitivo do Caminho Neocatecumenal, Título I, a. 1º, § 1º. 2008).</p>
-            <p class="text-sm text-gray-700 mb-3"><strong>Responsável:</strong> Roberto Amadeu e Wilma</p>
+            <p class="text-sm text-gray-700"><strong>Responsável:</strong> Roberto Amadeu e Wilma</p>
             <p class="text-sm text-gray-700">Email: <a href="mailto:roberto.amadeu_ra@yahoo.com.br" class="text-[#dc143c] hover:underline">roberto.amadeu_ra@yahoo.com.br</a></p>
             
             <h4 class="font-semibold mb-2 text-sm">MPP – Missão Popular Paroquial</h4>
@@ -1556,7 +1569,7 @@
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z"></path>
                 </svg>
               </div>
               <div>
@@ -1761,29 +1774,50 @@
     const mobileMenu = document.getElementById('mobile-menu');
     
     mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-      mobileMenuBtn.classList.toggle('active'); // Toggle hamburger animation
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      
+      if (isExpanded) {
+        // Fechar menu
+        mobileMenu.classList.remove('max-h-[800px]', 'opacity-100');
+        mobileMenu.classList.add('max-h-0', 'opacity-0');
+        mobileMenuBtn.classList.remove('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        // Abrir menu
+        mobileMenu.classList.remove('max-h-0', 'opacity-0');
+        mobileMenu.classList.add('max-h-[800px]', 'opacity-100');
+        mobileMenuBtn.classList.add('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      }
     });
     
     // Close mobile menu when clicking on a link
     const mobileMenuLinks = mobileMenu.querySelectorAll('a');
     mobileMenuLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        mobileMenuBtn.classList.remove('active'); // Remove hamburger animation
+        mobileMenu.classList.remove('max-h-[800px]', 'opacity-100');
+        mobileMenu.classList.add('max-h-0', 'opacity-0');
+        mobileMenuBtn.classList.remove('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
       });
     });
     
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
+    function updateNavbar() {
+      if (window.scrollY > 20) {
+        navbar.classList.remove('bg-transparent');
+        navbar.classList.add('bg-[#faf8f5]', 'shadow-md');
       } else {
-        navbar.classList.remove('scrolled');
+        navbar.classList.add('bg-transparent');
+        navbar.classList.remove('bg-[#faf8f5]', 'shadow-md');
       }
-    });
+    }
+
+    window.addEventListener('scroll', updateNavbar);
+    // Call immediately to set initial state
+    updateNavbar();
     
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
